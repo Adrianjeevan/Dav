@@ -1,0 +1,176 @@
+---
+import OtherClass from "../components/OtherClass.astro";
+import PageBanner from "../components/PageBanner.astro";
+import Section from "../components/Section.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import Layout from "../layouts/Layout.astro";
+import Art from "../components/svgs/Art.astro";
+import AmenetiesSlider from "../components/AmenetiesSlider.astro";
+import SafetySlider from "../components/SafetySlider.astro";
+---
+
+<Layout title="Contact">
+  <PageBanner title="contact" />
+
+  <Section>
+    <div class="container">
+      <SectionTitle title="Contact Us " subtitle="" substyle="" />
+
+      <div class="contact">
+        <div class="contact-card">
+          <img src="/images/team.png" alt="" />
+          <p class="sub-title">Address</p>
+          <p>
+            DAV Public School, <br />
+             Sy. No. 58 &amp; 67, Kanthaiahnapalya, <br />
+             Pipeline Road, Off Kanakapura Road,<br />
+             Kaggalipura, Bengaluru – 560 116.
+          </p>
+        </div>
+        <div class="contact-card">
+          <img src="/images/team.png" alt="" />
+          <p class="sub-title">Contact-info</p>
+          <p>
+            <a href="tel:+917338522728">+91 7338522728</a>
+            <br />
+            <a href="tel:+917899762728">+91 7899762728</a>
+            <br />
+            <a href="mailto:davbangalore@gmail.com">davbangalore@gmail.com</a>
+          </p>
+        </div>
+        <div class="contact-card">
+          <img src="/images/team.png" alt="" />
+          <p class="sub-title">Working Time</p>
+          <p>
+            <a href="tel:+917338522728">+91 7338522728</a>
+            <br />
+            <a href="tel:+917899762728">+91 7899762728</a>
+            <br />
+          </p>
+        </div>
+      </div>
+
+    
+    </div>
+  </Section>
+
+  <Section>
+    <SectionTitle
+    title="Fill the form below so we can get to know you and your needs better."
+    classes="text-center" style="padding:2rem 0;"
+  />
+
+  <div>
+    <form action="">
+      <input type="text" name="name" required placeholder="Student Name" />
+      <input type="text" name="parentname" required placeholder="Parent Name" />
+      <input type="text" name="number" required placeholder="Mobile" />
+      <input
+        type="text"
+        name="email"
+        required
+        placeholder="Email Address"
+      />
+      <textarea
+        name="message"
+        id=""
+        cols="30"
+        rows="10"
+        placeholder="Your Message"></textarea>
+
+      <div><button>Submit</button></div>
+    </form>
+  </div>
+  </Section>
+
+
+  <Section>
+    <div class="container">
+        <SectionTitle
+        title="Locate Us"
+        classes="text-center" style="padding:2rem 0;"
+      />
+
+
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15562.583322260489!2d77.5013372!3d12.8014861!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3fe10df81e79%3A0x55319686b0caab0e!2sDAV%20Public%20School!5e0!3m2!1sen!2sin!4v1702395507163!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+  </Section>
+
+  <!-- <OtherClass /> -->
+</Layout>
+
+<style lang="scss">
+  .contact {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-content: center;
+
+    @media screen and (max-width: 991px) {
+      grid-template-columns: repeat(1, 300px);
+      row-gap: 3rem;
+    }
+
+    img {
+      max-width: 100px;
+    }
+
+    .contact-card {
+      text-align: center;
+      .sub-title {
+        padding: 1rem 0;
+      }
+    }
+  }
+
+  form {
+    display: flex;
+    width: 40%;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 2rem;
+
+    @media screen and (max-width:991px) {
+        width: 80%;
+}
+
+    input {
+      padding: 0.5rem;
+      font-size: 15px;
+      border: solid 2px var(--brown);
+    }
+
+    textarea {
+      padding: 0.5rem;
+      font-size: 15px;
+      border: solid 2px var(--brown);
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus,
+    button:focus {
+      outline: none;
+    }
+
+
+    button{
+        background-color: var(--brown);
+        padding: 0.4rem 2rem;
+        border-radius: 10px;
+        border: none;
+        color: white;
+
+    }
+  }
+
+  .map{
+    display: flex;
+    justify-content: center;
+
+    iframe{
+    width:100% ;
+  }
+  }
+</style>

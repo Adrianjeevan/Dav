@@ -1,0 +1,57 @@
+---
+import PageBanner from "../components/PageBanner.astro";
+import Section from "../components/Section.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import Layout from "../layouts/Layout.astro";
+
+---
+
+
+<Layout title="Admissions">
+    <PageBanner title="Admissions"/>
+    <Section>
+       <div class="container">
+        <SectionTitle title="Admission Procedure"/>
+
+        <div class="admission">
+            <ul>
+                <li><div class="sub-title">Call us:</div> Initiate the admission process by reaching out to our dedicated admissions team via phone. Our friendly and knowledgeable staff are ready to assist you with any queries and guide you through the next steps.</li>
+             
+                <li><div class="sub-title">Visit the campus:</div> Immerse yourself in the vibrant atmosphere of our campus by scheduling a visit. Experience firsthand our state-of-the-art facilities, explore academic resources, and interact with faculty members to gain a deeper understanding of our educational environment.</li>
+             
+                <li><div class="sub-title">Register with Application:</div> Begin your formal application by registering online or completing a physical application form. Provide accurate and comprehensive information to ensure a smooth processing of your application.</li>
+             
+                <li><div class="sub-title">Schedule an Entrance Test:</div> Demonstrate your academic proficiency by scheduling and taking an entrance test. This step helps us assess your readiness for the program and ensures a good fit between your educational goals and the offerings of our institution.</li>
+             
+                <li><div class="sub-title">Parent and Students Interview session:</div> Engage in a meaningful conversation with our admissions team through interviews for both parents and students. This interaction allows us to better understand your aspirations, address any concerns, and ensure that our educational philosophy aligns with your expectations.</li>
+             
+                <li><div class="sub-title">Payment of Fee:</div> Once you successfully complete the assessment and interview phase, proceed with the payment of the required fees. This step secures your spot in the program and enables us to provide you with the necessary resources for a fulfilling academic journey.</li>
+             
+                <li><div class="sub-title">Documents and Application submission:</div> Finalize the admission process by submitting all necessary documents and completing the application. Ensure that all paperwork is accurate and up-to-date to facilitate a seamless transition into the academic community.</li>
+             </ul>
+             
+             
+        </div>
+       </div>
+    </Section>
+</Layout>
+
+<style lang="scss">
+    .admission{
+        ul{
+            list-style: none;
+
+            li{
+                padding-bottom: 1rem;
+            }
+
+            .sub-title{
+                color: var(--brown);
+
+                strong{
+                        color: var(--brown) !important;
+                    }
+            }
+        }
+    }
+</style>

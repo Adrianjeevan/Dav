@@ -1,0 +1,84 @@
+---
+const { names, image, date, time, description } = Astro.props;
+import Section from "./Section.astro";
+import SectionTitle from "./SectionTitle.astro";
+import PageBanner from "./PageBanner.astro";
+---
+
+<PageBanner title="Events" secondtitle={names} />
+<Section>
+  <div class="container">
+    <SectionTitle title={names} />
+
+    <div class="events-wrapper">
+      <img src={image} alt="" />
+
+      <div class="d-flex gap-3">
+        <p class="sub-title"><span>Date:</span> {date}</p>
+        <p class="sub-title"><span>Time:</span>{time}</p>
+      </div>
+
+      <div>
+        <div class="sub-title">Event description</div>
+        <p>{description}</p>
+      </div>
+    </div>
+
+    <h1>Days Countdown</h1>
+    <label for="targetDate">Target Date:</label>
+   
+    <button onclick="startCountdown{date}">Start Countdown</button>
+    <p id="countdown"></p>
+  
+  </div>
+</Section>
+
+<style lang="scss">
+  .events-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    img {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+    }
+  }
+</style>
+
+<script is:inline >
+    let countdownInterval;
+
+    function startCountdown(targetDateString) {
+      // Convert the input date string to a Date object
+      const targetDate = new Date(targetDateString);
+
+      // Clear any existing intervals
+      clearInterval(countdownInterval);
+
+      // Update the countdown every second
+      countdownInterval = setInterval(function() {
+        // Get the current date
+        const currentDate = new Date();
+
+        // Calculate the time difference in milliseconds
+        const timeDifference = targetDate - currentDate;
+
+        // Check if the target date has passed
+        if (timeDifference <= 0) {
+          clearInterval(countdownInterval);
+          document.getElementById('countdown').textContent = 'Countdown expired!';
+        } else {
+          // Calculate the remaining days, hours, minutes, and seconds
+          const daysRemaining = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+          const hoursRemaining = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutesRemaining = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+          const secondsRemaining = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+          // Display the remaining time
+          document.getElementById('countdown').textContent =
+            `Days: ${daysRemaining} | Hours: ${hoursRemaining} | Minutes: ${minutesRemaining} | Seconds: ${secondsRemaining}`;
+        }
+      }, 1000);
+    }
+  </script>

@@ -1,0 +1,119 @@
+---
+import OtherClass from "../components/OtherClass.astro";
+import PageBanner from "../components/PageBanner.astro";
+import Section from "../components/Section.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+    <PageBanner title="Nursery, LKG, UKG"/>
+    <img src="/images/nursery.jpg"  class="class-image" alt="DAV public school Bangalore - Nursery">
+    <Section>
+        <div class="container">
+
+           
+            <SectionTitle title="Nursery, LKG, UKG" 
+            subtitle=" The Nursery, LKG, and UKG curriculum focuses on developing gross and fine motor skills, phonics, strokes, English language, environmental studies,number work, Hindi language, music, Homa (ritual fire), yoga, Shlokas (sacred verses), sports, games, and field trips to provide a holistic learning experience." substyle="" />
+
+           
+
+            <div class="row lists justify-content-around align-items-start layout pt-5 gy-5">
+                <div class="col-lg-3">
+                    <div>
+                        <SectionTitle title="Curriculum"/>
+                        <ul>
+                            <li>&rarr; Gross motor skills</li>
+                            <li>&rarr; Fine motor skills</li>
+                            <li>&rarr; Phonics</li>
+                            <li>&rarr; Strokes</li>
+                            <li>&rarr; English</li>
+                            <li>&rarr; Environment Studies</li>
+                            <li>&rarr; Number Work</li>
+                            <li>&rarr; Hindi</li>
+                            <li>&rarr; Music</li>
+                            <li>&rarr; Homa</li>
+                            <li>&rarr; Yoga</li>
+                            <li>&rarr; Shlokas</li>
+                            <li>&rarr; Sports</li>
+                            <li>&rarr; Games</li>
+                            <li>&rarr; Field Trip</li>
+                          </ul>
+                          
+                    </div>
+                </div>
+                <div class="col-lg-5 d-flex flex-column gap-4">
+                    <div class="sub-title">
+                        SCHOOL DETAILS (TIMING, DRESS CODE)
+                    </div>
+
+                  <div>
+                    <p class="sub-title brown">
+                        Timings 
+                    </p>
+                    <p>
+                        Monday to Friday - 8.40 am to 3.20 pm
+                    </p>
+                    <p>
+                        Saturday – 8.40 am to 11.55 am – Grade VI to XII
+                    </p>
+                  </div>
+
+                  <div>
+                    <p class="sub-title brown">
+                        Dress Code 
+                    </p>
+                    <p>
+                        Monday, Tuesday, Thursday, Friday – Regular Uniform
+                    </p>
+                    <p>
+                        Wednesday, Saturday – Track Suit
+                    </p>
+                  </div>
+
+
+
+
+                </div>
+            </div>
+
+            
+        </div>
+        
+    </Section>
+
+  <OtherClass/>
+</Layout>
+
+
+<style lang="scss">
+.lists{
+
+    >:nth-child(1){
+  background-color: aliceblue;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+
+>:nth-child(2){
+  background-color: aliceblue;
+ padding: 2rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+    ul{
+        list-style: none; 
+        li{
+            padding-bottom: 1rem;
+        }
+    }
+}
+
+
+</style>
+
+
+<style  lang="scss" is:global >
+   
+</style>

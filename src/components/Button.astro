@@ -1,0 +1,46 @@
+---
+const { title, link, classes, variant } = Astro.props
+---
+
+<div class={classes} >
+    {variant === 'normal' ? (<a href={link} class="normal">{title}</a>) : (<a href={link} class="light">{title}</a>)}
+</div>
+
+<style lang="scss" is:global  >
+    .normal{
+        font-size: 16px;
+        line-height: 1 ;
+        margin: 0;
+        padding: 0.8rem 1.3rem;
+        background-color: brown; 
+        border-radius: 5px;
+        color: white;
+        transition: var(--transition);
+
+
+        &:hover{
+            background-color: rgb(159, 63, 63);
+            
+        }
+    }
+
+
+    .light{
+        font-size: 16px;
+      
+        // margin: 0;
+        padding: 0.8rem 1.3rem;
+        background-color: transparent; 
+        border-radius: 5px;
+        border: solid 1px rgb(192, 189, 189);
+        color:black;
+        cursor: pointer;
+        transition: var(--transition);
+
+
+        &:hover{
+            border: solid 1px var(--brown);
+            
+        }
+    }
+</style>

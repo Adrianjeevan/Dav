@@ -1,0 +1,121 @@
+---
+import OtherClass from "../components/OtherClass.astro";
+import PageBanner from "../components/PageBanner.astro";
+import Section from "../components/Section.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <PageBanner title="Grade 11 - 12" />
+  <img src="/images/11-12.jpg" alt="DAV public school Bangalore - grade11-12" class="class-image">
+  <Section>
+    <div class="container">
+      <SectionTitle
+        title="Grade 11 - 12"
+        subtitle=" The Nursery, LKG, and UKG curriculum focuses on developing gross and fine motor skills, phonics, strokes, English language, environmental studies,number work, Hindi language, music, Homa (ritual fire), yoga, Shlokas (sacred verses), sports, games, and field trips to provide a holistic learning experience."
+        substyle=""
+      />
+
+      <div class="row lists justify-content-around align-items-start layout pt-5 gy-5">
+        <div class="col-lg-3">
+          <div class="content-wrapper">
+            <SectionTitle title="Curriculum" style="padding:0;" />
+            <div>
+                <h2>Languages </h2>
+            <ul>
+                <li><span>&#10148;</span> English</li>
+                <li><span>&#10148;</span> Hindi</li>
+                <li><span>&#10148;</span> Kannada</li>
+              
+            </ul>
+            </div>
+
+           <div>
+            <h2>Subjects</h2>
+            <ul>
+                <li><span>&#10148;</span> Business Studies</li>
+                <li><span>&#10148;</span> Physics</li>
+                <li><span>&#10148;</span> Accountancy</li>
+                <li><span>&#10148;</span> Chemistry</li>
+                <li><span>&#10148;</span> Economics</li>
+                <li><span>&#10148;</span> Mathematics</li>
+            </ul>
+           </div>
+           <div>
+            <h2>Optional Subjects</h2>
+            <ul>
+                <li><span>&#10148;</span> Computer Science</li>
+                <li><span>&#10148;</span> Biology</li>
+                <li><span>&#10148;</span> Physical Education</li>
+            </ul>
+           </div>
+          </div>
+        </div>
+        <div class="col-lg-5 d-flex flex-column gap-4">
+          <div class="sub-title">SCHOOL DETAILS (TIMING, DRESS CODE)</div>
+
+          <div>
+            <p class="sub-title brown">Timings</p>
+            <p>Monday to Friday - 8.40 am to 3.20 pm</p>
+            <p>Saturday – 8.40 am to 11.55 am – Grade VI to XII</p>
+          </div>
+
+          <div>
+            <p class="sub-title brown">Dress Code</p>
+            <p>Monday, Tuesday, Thursday, Friday – Regular Uniform</p>
+            <p>Wednesday, Saturday – Track Suit</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <OtherClass />
+</Layout>
+
+<style lang="scss">
+  .lists {
+    >:nth-child(1){
+  background-color: aliceblue;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+
+>:nth-child(2){
+  background-color: aliceblue;
+ padding: 2rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+    .content-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    h2{
+        font-size: 22px;
+        padding-bottom: 10px;
+        color: var(--blue);
+
+        span{
+            font-size: 18px;
+        }
+    }
+    ul {
+      list-style: none;
+      li {
+        padding-bottom: 0.5rem;
+        display: flex;
+        gap: 15px;
+        span{
+            color: var(--brown);
+        }
+      }
+    }
+  }
+
+
+</style>

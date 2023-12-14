@@ -1,0 +1,196 @@
+---
+import PageBanner from "../../components/PageBanner.astro";
+import Layout from "../../layouts/Layout.astro";
+import SectionTitle from "../../components/SectionTitle.astro";
+import Section from "../../components/Section.astro";
+
+const names = "Events";
+const date = "12-12-23";
+const time = "Events";
+const image = "/images/kids.jpg";
+const description = "lloreerjbgrhjbgwirhbghrvuwg";
+const upcoming = true;
+
+import EventSingleCard from "../../components/EventSingleCard.astro";
+---
+
+<Layout title="dav">
+  <PageBanner title="Events" secondtitle={names} />
+  <Section>
+    <div class="container">
+      <SectionTitle title={names} />
+
+      <div class="events-wrapper">
+        <div>
+          <img src={image} alt="" />
+
+          {
+            upcoming && (
+              <div class="overlay">
+                 <div>
+                    <label for="Days">Days</label>
+                <div id="days" class="countdown-item">
+                  Days: {" "}
+                </div>
+                </div>
+
+
+                <div>
+                    <label for="Days">Hours</label>
+                <div id="hours" class="countdown-item">
+                  Hours :  {" "}
+                </div></div>
+
+                <div>
+                    <label for="">Minutes</label>
+                <div id="minutes" class="countdown-item">
+                  Minutes:{" "}
+                </div></div>
+
+              <div>
+                <label for="">Seconds</label>
+                <div id="seconds" class="countdown-item">
+                  Seconds:{" "}
+                </div></div>
+
+
+              </div>
+            )
+          }
+        </div>
+
+        <div class="d-flex gap-3">
+          <p class="sub-title"><span>Date:</span> {date}</p>
+          <p class="sub-title"><span>Time:</span>{time}</p>
+        </div>
+
+        <div>
+          <div class="sub-title">Event description</div>
+          <p>{description}</p>
+        </div>
+      </div>
+
+      
+    </div>
+  </Section>
+</Layout>
+
+<script is:inline>
+  let countdownInterval;
+
+  // Function to start the countdown with a target date
+  function startCountdown(targetDateString) {
+    const targetDate = new Date(targetDateString);
+
+    // Update the countdown every second
+    countdownInterval = setInterval(function () {
+      const currentDate = new Date();
+      const timeDifference = targetDate - currentDate;
+
+      if (timeDifference <= 0) {
+        clearInterval(countdownInterval);
+        document.getElementById("days").textContent = "Days: 0";
+        document.getElementById("hours").textContent = "Hours: 0";
+        document.getElementById("minutes").textContent = "Minutes: 0";
+        document.getElementById("seconds").textContent = "Seconds: 0";
+      } else {
+        const daysRemaining = Math.floor(
+          timeDifference / (1000 * 60 * 60 * 24)
+        );
+        const hoursRemaining = Math.floor(
+          (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutesRemaining = Math.floor(
+          (timeDifference % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        const secondsRemaining = Math.floor(
+          (timeDifference % (1000 * 60)) / 1000
+        );
+
+        // Display the remaining time in separate div elements
+        document.getElementById("days").textContent = ` ${daysRemaining}`;
+        document.getElementById("hours").textContent =
+          ` ${hoursRemaining}`;
+        document.getElementById("minutes").textContent =
+          `${minutesRemaining}`;
+        document.getElementById("seconds").textContent =
+          ` ${secondsRemaining}`;
+      }
+    }, 1000);
+  }
+
+  // Retrieve the stored value before rendering
+  const storedTargetDate = localStorage.getItem("targetDate");
+
+  // Start the countdown with the stored value or a default value
+  window.onload = function () {
+    const defaultTargetDate = "2023-12-31"; // Change the default target date as needed
+    const targetDateToUse = storedTargetDate || defaultTargetDate;
+    startCountdown(targetDateToUse);
+  };
+</script>
+
+<style lang="scss">
+  .events-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    img {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+    }
+
+    > :nth-child(1) {
+      position: relative;
+      .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        // flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        background-color: rgba(0, 0, 0, 0.439);
+        color: white;
+          font-size: 25px;
+
+          @media screen and (max-width:991px) {
+            flex-direction: column;
+
+            >div{
+                height: 100px !important;
+            width: 100px !important;
+            border-radius: 100px !important;
+
+            }
+          }
+        
+          .countdown-item{
+            display: flex ;
+            flex-direction: column;
+            font-weight: bold;
+          }
+
+         >div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(243, 240, 240, 0.34);
+            padding: 2rem;
+            height: 120px;
+            width: 120px;
+            border-radius: 120px;
+
+            label{
+                font-size: 15px;
+            }
+         }
+      }
+    }
+  }
+</style>

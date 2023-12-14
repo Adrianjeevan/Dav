@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Hero from '../components/Hero.astro';
+import Course from '../components/Course.astro';
+import Whyus from '../components/Whyus.astro';
+import Events from '../components/Events.astro';
+import Testimonial from '../components/Testimonial.astro';
+---
+
+<Layout title="Welcome to Astro.">
+  
+	<Hero />
+	<Course/>
+	<Whyus/>
+	<Events/>
+	<Testimonial/>
+
+
+</Layout>
+
+<style lang="scss">
+
+.f-carousel__slide.is-nav-selected {
+        color: #fff;
+        background: #ff3520;
+      }
+
+
+	  
+#myNavigation {
+        --f-carousel-slide-width: 100px;
+        --f-carousel-spacing: 5px;
+    //    background-color:red;
+		width:300px;
+		
+      }
+.f-carousel {
+	--f-button-display:none !important;
+  --f-button-width: 38px;
+  --f-button-height: 38px;
+
+  --f-button-svg-width: 0px;
+  --f-button-svg-height: 16px;
+  --f-button-svg-stroke-width: 2.5;
+
+  --f-button-color: rgb(71 85 105);
+  --f-button-border-radius: 50%;
+  --f-button-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%), 0 3px 7px -3px rgb(0 0
+          0 / 30%);
+
+  --f-button-bg: #fff;
+  --f-button-hover-bg: #f9f9f9;
+  --f-button-active-bg: #f0f0f0;
+}
+      
+</style>

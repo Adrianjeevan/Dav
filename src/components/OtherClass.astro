@@ -1,0 +1,83 @@
+---
+import Section from "./Section.astro";
+import SectionTitle from "./SectionTitle.astro";
+
+---
+
+<Section>
+    <div class="container">
+        <SectionTitle title="Other Classes & Courses" classes="text-center"/>
+        <div class="others">
+            {
+                Astro.url.pathname !== '/nursery' &&  <div>
+                <h5>Nursery,LKG,UKG</h5>  
+                <a href="/nursery">Know more</a>
+            </div>
+            }
+            
+                {
+                    Astro.url.pathname !== '/grade1-5' ? ( <div>
+                        <h5>Grade 1 - 5</h5>  
+                    <a href="/grade1-5">Know more</a>
+                        
+                        </div>  ) : null
+                }
+            
+            
+               {
+                 Astro.url.pathname !== '/grade6-8' && <div>
+                    <h5>Grade 6 - 8</h5>  
+                 <a href="/grade6-8">Know more</a></div>
+               }
+           
+           
+                {
+                  Astro.url.pathname !== '/grade9-10' && <div>
+                    <h5>Grade 9 - 10</h5>  
+                  <a href="/grade9-10">Know more</a></div>
+                }
+           
+           
+                {
+                    Astro.url.pathname !== '/grade11-12' && <div>
+                        <h5>Grade 11 -12</h5>   
+                    <a href="/grade11-12">Know more</a></div>
+                }
+          
+        </div>
+    </div>
+</Section>
+
+<style lang="scss">
+.others{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+
+    @media  screen and ( max-width : 991px) {
+        grid-template-columns: repeat(2 , 1fr);
+    }
+    @media  screen and ( max-width : 500px) {
+        grid-template-columns: repeat(1 , 300px);
+    }
+    >div{
+      background-color: rgb(231, 232, 232);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      border-radius: 10px;
+
+      h5{
+        color: var(--brown);
+      }
+
+      a{
+        font-size: 15px;
+        text-decoration: underline;
+      }
+    }
+}
+</style>

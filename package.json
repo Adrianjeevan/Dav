@@ -1,0 +1,19 @@
+{
+  "name": "dav",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@fancyapps/ui": "^5.0.28",
+    "astro": "^3.6.3",
+    "sass": "^1.69.5",
+    "swiper": "^11.0.5",
+    "tiny-slider": "^2.9.4"
+  }
+}

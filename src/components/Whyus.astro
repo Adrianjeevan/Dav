@@ -1,0 +1,125 @@
+---
+import Section from "./Section.astro";
+import SectionTitle from "./SectionTitle.astro";
+import Button from "./Button.astro";
+
+
+---
+
+
+<Section style=" background-color:rgb(240, 240, 240);">
+    <div class="container">
+        <div>
+            <SectionTitle title="Why Choose Us" classes="text-center" subtitle="A choice that makes the difference." style="padding-bottom:4rem;" substyle="margin:0 auto;" />
+
+            <div class="why-us">
+               <div>
+                <img src="/images/icons/value-based-education.png" alt="Dav public school">
+
+                <h4>Value based training</h4>
+               </div>
+               <div>
+                <img src="/images/icons/guidence.png" alt="Dav public school">
+
+                <h4>Expert Guidance</h4>
+               </div>
+               <div>
+                <img src="/images/icons/quality-education.png" alt="Dav public school">
+
+
+                <h4>Quality Education</h4>
+               </div>
+               <div>
+                <img src="/images/icons/stress-free.png" alt="Dav public school">
+
+
+                <h4>Stress Free Education</h4>
+               </div>
+               <div>
+                <img src="/images/icons/Induvidual-attention.png" alt="Dav public school">
+
+
+                <h4>Individual Attention </h4>
+               </div>
+               <div>
+                <img src="/images/icons/Teacher-students.png" alt="Dav public school">
+
+                <h4>Free and Frank rapport</h4>
+               </div>
+               <div>
+                <img src="/images/icons/Patents-meeting.png" alt="Dav public school">
+
+
+                <h4>Regular Parent Teacher interaction</h4>
+               </div>
+               <div>
+                <img src="/images/icons/Global-outlook.png" alt="Dav public school">
+
+
+                <h4>Global Outlook</h4>
+               </div>
+               <div>
+                <img src="/images/icons/Environment.png" alt="Dav public school">
+
+
+
+                <h4>Conducive Environment</h4>
+               </div>
+               <div>
+                <img src="/images/icons/Pollution-free.png" alt="Dav public school">
+
+
+                <h4>Pollution Free Green Campus</h4>
+               </div>
+            </div>
+
+
+            <Button title="Learn more" link="/about" classes="text-center" variant="normal" ></Button>
+        </div>
+    </div>
+</Section>
+
+
+<style lang="scss">
+  .why-us{
+    display: grid;
+    padding-bottom: 4rem;
+    
+    grid-template-columns: repeat(3 , 1fr );
+    place-items: center;
+    place-content: center;
+    text-align: center;
+    gap: 2rem;
+
+
+    @media  screen and (max-width: 991px) {
+        grid-template-columns: repeat(1 , 1fr );
+        row-gap: 2rem;
+    }
+
+
+    div{
+        background-color: white;
+        padding: 2rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px ;
+        gap: 1rem;
+        align-items: center;
+        transition: var(--transition);
+
+        &:hover{
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+        // width: 300px;
+    }
+    img{
+        max-width: 80px;
+    }
+    h4{
+        font-size: 20px;
+        padding-top: 10px;
+    }
+  }
+</style>

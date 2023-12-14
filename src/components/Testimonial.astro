@@ -1,0 +1,169 @@
+---
+import Section from "./Section.astro";
+import SectionTitle from "./SectionTitle.astro";
+import TestimonialCard from "./TestimonialCard.astro";
+import { tns } from "tiny-slider/src/tiny-slider";
+import { Carousel } from "@fancyapps/ui";
+import { Thumbs } from "@fancyapps/ui/dist/carousel/carousel.thumbs.esm.js";
+import "@fancyapps/ui/dist/carousel/carousel.thumbs.css";
+import { Autoplay } from "@fancyapps/ui/dist/carousel/carousel.autoplay.esm.js";
+import "@fancyapps/ui/dist/carousel/carousel.autoplay.css";
+import "@fancyapps/ui/dist/carousel/carousel.css";
+---
+
+<Section>
+  <div class="container">
+    <SectionTitle title="What People Say" classes="text-center" subtitle="" />
+
+    <div class="f-carousel" id="myNavigation">
+      <div class="f-carousel__slide">
+        <img src="/images/kids.jpg" alt="" />
+      </div>
+      <div class="f-carousel__slide">
+        <img src="/images/kids.jpg" alt="" />
+      </div>
+      <div class="f-carousel__slide">
+        <img src="/images/kids.jpg" alt="" />
+      </div>
+      <div class="f-carousel__slide">
+        <img src="/images/kids.jpg" alt="" />
+      </div>
+      <div class="f-carousel__slide">
+        <img src="/images/kids.jpg" alt="" />
+      </div>
+      <div class="f-carousel__slide">
+        <img src="/images/kids.jpg" alt="" />
+      </div>
+    </div>
+
+    <div class="f-carousel" id="myCarousel">
+      <div class="f-carousel__slide">
+        <TestimonialCard
+          name=" Sai Subramanya"
+          role="Alumni"
+          message="“We were not only trained to be good in our academics but also excel in any field My school has played a very important role in my Life”."
+        />
+      </div>
+      <div class="f-carousel__slide">
+        <TestimonialCard
+          name="Ayushi Jha"
+          role="Alumni"
+          message="“The school or I would love to call it my family. DAV Family has built up a lot of characters in me and every child who needs to learn in his / her life. It has helped me to find out my talents and I realized that I am good in Dancing, improved my personality.”"
+        />
+      </div>
+      <div class="f-carousel__slide">
+        <TestimonialCard
+          name="U Shreya Bhargava"
+          role="Alumni"
+          message="“My Teachers made my learning experience very interesting and valuable. They were very encouraging and boosted my confidence every now and then”."
+        />
+      </div>
+      <div class="f-carousel__slide">
+        <TestimonialCard
+          name="Sonu I K"
+          role="Alumni"
+          message="“We have been taught Values and Culture here…, The Co-Curricular activities like dance, singing and elocution competition bring out hidden talent in students."
+        />
+      </div>
+      <div class="f-carousel__slide">
+        <TestimonialCard
+          name="Mr. Raguraman Kadambi"
+          role="Parent of Neha, Grade IX"
+          message="“The method of teaching is lucid! Encouraging a child to participate in school  events is one of the key aspects of childs development and we see that in abundance in DAV."
+        />
+      </div>
+      <div class="f-carousel__slide">
+        <TestimonialCard
+          name="Gitanjali Biswal & Manoj Kumar Biswal"
+          role="Parents of Umika Grade II and Adya Grade VIII"
+          message="“The School has excellent staff and they are so much supportive, apart from academics, teachers show keen interest on overall development of students”"
+        />
+      </div>
+    
+    </div>
+  </div>
+</Section>
+
+<style lang="scss">
+  .f-carousel__slide.is-nav-selected {
+    color: #fff;
+    // background-color: #ff3520 !important ;
+    border-radius: 50% !important;
+    transform: scale(1) !important ;
+    border: dotted 2px black;
+    padding: 0.2rem;
+    opacity: 1 !important;
+    margin-top: 50px !important;
+    // height: 100px !important;
+    // width: 100px !important ;
+    height: 80px !important ;
+    width: 80px !important ;
+  }
+
+  --f-carousel__track {
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+
+  #myNavigation {
+    // --f-carousel-slide-width: 100px;
+    --f-carousel-spacing: 40px !important ;
+    //    background-color:red;
+    width: 490px;
+    height: 200px;
+    overflow: visible !important;
+    margin: 0 auto;
+    justify-content: space-between !important;
+    align-items: center !important;
+    display: flex !important;
+
+    @media screen and (max-width: 500px) {
+      width: 300px !important;
+
+      --f-carousel-spacing: 37px !important ;
+    }
+
+    // --f-carousel-slide-width: calc((100% - 16px) / 3);
+
+    .f-carousel__slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 80px;
+      height: 60px;
+      width: 60px;
+      overflow: hidden !important;
+      margin-top: 60px;
+      // margin-left: -20px;
+      // left:0 !important;
+      //   left: 0px;
+      opacity: 0.5;
+      transform: scale(0.98);
+      // margin: 0 auto;
+
+      img {
+        height: 100%;
+        width: 100%;
+        border-radius: 50% !important;
+      }
+    }
+  }
+  .f-carousel {
+    --f-button-display: none !important;
+    --f-button-width: 38px;
+    --f-button-height: 38px;
+
+    --f-button-svg-width: 20px;
+    --f-button-svg-height: 20px;
+    --f-button-svg-stroke-width: 2.5;
+
+    --f-button-color: rgb(71 85 105);
+    --f-button-border-radius: 50%;
+    --f-button-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%),
+      0 3px 7px -3px rgb(0 0 0 / 30%);
+
+    --f-button-bg: #fff;
+    --f-button-hover-bg: #f9f9f9;
+    --f-button-active-bg: #f0f0f0;
+  }
+</style>

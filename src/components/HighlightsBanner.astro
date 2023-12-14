@@ -1,0 +1,87 @@
+---
+import SectionTitle from "./SectionTitle.astro";
+---
+
+<div class="highlights">
+    <div class="container">
+        <div class="wrapper text-white">
+            <div class="d-flex " >
+                <img src="/images/team.png" alt="">
+                <h5>
+                    BEST INDUSTRY TEACHERS</h5>
+            </div>
+            <div class="d-flex   " >
+                <img src="/images/team.png" alt="">
+                <h5>
+                    BEST INDUSTRY CAMPUS</h5>
+
+            </div>
+            <div class="d-flex  " >
+                <img src="/images/team.png" alt="">
+                <h5>
+                    BEST INDUSTRY EDUCATION</h5>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<style lang="scss">
+    .highlights{
+        position: absolute;
+        top: 80%;
+        left: 0;
+        width: 100%;
+        z-index: 1;  
+
+        @media screen and (max-width: 991px){
+            position: relative !important;
+            top: 0;
+            padding-top: 3rem;
+        }
+        .wrapper{
+            display: grid;
+            column-gap: 2rem;
+            grid-template-columns: repeat(3 , auto );
+
+            @media screen and (max-width: 991px) {
+                grid-template-columns: repeat(1 , auto );
+                row-gap: 2rem;
+
+                >div{
+                    justify-content: center;
+                    // align-items: center;
+                    width: 80%;
+                    gap: 2rem;
+                    margin: 0 auto;
+                }
+            }
+          img{
+            max-width: 80px;
+            object-fit: contain;
+          }
+
+          >div{
+            background-color: rgba(0, 0, 0, 0.494);
+            padding: 2rem;
+            border-radius: 10px;
+            gap: 2rem;
+            align-items: center;
+            // justify-content: space-between !important;
+            h5{
+                font-size: clamp(20px,4vw,23px);
+                // line-height: 1;
+                margin: 0;
+                // padding-bottom: 10px;
+            }
+
+            a{
+                transition: var(--transition);
+                &:hover{
+                    color: var(--brown);
+                }
+            }
+          }
+        }
+    }
+</style>

@@ -1,0 +1,116 @@
+---
+const { date, month, name, time, location, image, link } = Astro.props
+---
+
+<div class="event-grid">
+    <div>
+        <h4>{date}</h4>
+        <p>{month}</p>
+    </div>
+
+    <div>
+        <a class="sub-title pb-2" href={link} >
+            {name}
+        </a>
+        <div class="time-date">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
+                  </svg>
+
+                  <p>{time}</p>
+            </div>
+
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                    <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
+                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                  </svg>
+
+                  <p>Bangalore</p>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <div class="image">
+        <img src={image} alt="">
+    </div>
+  </div>
+
+  <style lang="scss">
+     .event-grid{
+    display: grid;
+    grid-template-columns:  200px  1fr 300px ;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    padding: 2rem;
+
+    @media screen and  (max-width: 1200px) {
+        >:nth-child(2){
+            padding-left: 0rem  !important;
+        }
+    }
+
+    @media screen and  (max-width: 1080px) {
+       grid-template-columns: 1fr !important ;
+       place-content: center;
+       grid-template-rows: repeat( 2 , auto);
+       position: relative;
+       row-gap: 2rem;
+       padding: 1rem;
+
+       >:nth-child(3){
+        grid-row:1 / 2 ;
+       }
+       >:nth-child(2){
+        grid-row:2 / 3 ;
+       }
+       >:nth-child(1){
+        position: absolute;
+        background-color: white;
+        top: 3rem;
+        left: 3rem;
+        padding: 0.6rem ;
+        
+       }
+    }
+
+    >:nth-child(2){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 5rem;
+        // align-items: center;
+    }
+
+    >:nth-child(1){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h4{
+            font-size: clamp(27px ,4vw, 88px);
+            color: var(--brown);
+        }
+    }
+
+    .time-date{
+        display: flex;
+        gap: 3rem;
+        div{
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+    }
+    .image{
+        img{
+            width: 100%;
+            border-radius: 4px;
+        }
+    }
+ }
+  </style>

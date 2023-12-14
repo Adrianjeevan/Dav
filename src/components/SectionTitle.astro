@@ -1,0 +1,26 @@
+---
+const { title, subtitle, classes, style, substyle } = Astro.props;
+---
+
+<div class:list={[classes]} style={style}>
+ <h5 class="" style={subtitle ? 'padding-bottom:1rem;' : 'padding-bottom:0rem;' }>{title}</h5>
+ <p style={substyle}>{subtitle}</p>
+</div>
+
+
+<style lang="scss">
+    div{
+        padding-bottom: 2rem;
+    }
+h5{
+    font-size: clamp(25px,4vw,30px) !important;
+    font-weight: 600;
+}
+
+p{
+    font-size: 16px;
+    color: rgb(127, 132, 132);
+    width: 80%;
+    
+}
+</style>

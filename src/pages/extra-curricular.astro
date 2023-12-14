@@ -1,0 +1,158 @@
+---
+import OtherClass from "../components/OtherClass.astro";
+import PageBanner from "../components/PageBanner.astro";
+import Section from "../components/Section.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import Layout from "../layouts/Layout.astro";
+import Art from "../components/svgs/Art.astro"
+---
+
+<Layout>
+  <PageBanner title="Extra-curricular-activities" />
+  <img src="/images/kids.jpg" alt="DAV public school Bangalore - grade6-8" class="class-image"  />
+  <Section>
+    <div class="container">
+      <SectionTitle
+        title="Extra-curricular-activities"
+        subtitle=" The Nursery, LKG, and UKG curriculum focuses on developing gross and fine motor skills, phonics, strokes, English language, environmental studies,number work, Hindi language, music, Homa (ritual fire), yoga, Shlokas (sacred verses), sports, games, and field trips to provide a holistic learning experience."
+        substyle=""
+      />
+
+      <div class="activities pt-5">
+        <div>
+            <img src="/images/png/taekwondo.png" alt="Dav Public School - Taekwondo">
+            <p>Taekwondo</p>
+          </div>
+        
+          <div>
+            <img src="/images/png/seminar.png" alt="Dav Public School - Seminar">
+            <p>Seminar</p>
+          </div>
+        
+          <div>
+            <img src="/images/png/Yoga.png" alt="Dav Public School - Yoga">
+            <p>Yoga</p>
+          </div>
+        
+          <div>
+            <img src="/images/png/Special-Assembly.png" alt="Dav Public School - Special Assembly">
+            <p>Special Assembly</p>
+          </div>
+        
+          <div>
+            <img src="/images/png/Youth-parliament.png" alt="Dav Public School - Youth Parliament">
+            <p>Youth Parliament</p>
+          </div>
+        
+          <div>
+            <img src="/images/png/Art.png" alt="Dav Public School - Art">
+            <p>Art</p>
+          </div>
+        
+          <div>
+            <img src="/images/png/Co-Curricular-activities.png" alt="Dav Public School - Co-Curricular Activities">
+            <p>Co-Curricular Activities</p>
+          </div>
+        
+          <div>
+            <img src="/images/png/debate.png" alt="Dav Public School - Debate">
+            <p>Debate</p>
+          </div>
+        
+          <div>
+            <img src="/images/png/Educational-field-trip.png" alt="Dav Public School - Educational Field Trip">
+            <p>Educational Field Trip</p>
+          </div>
+        
+          <div>
+            <img src="/images/png/excursion.png" alt="Dav Public School - Excursion">
+            <p>Excursion</p>
+          </div>
+        
+          <div>
+            <img src="/images/png/exhibition.png" alt="Dav Public School - Exhibition">
+            <p>Exhibition</p>
+          </div>
+        
+          <div>
+            <img src="/images/png/festival-Celebration.png" alt="Dav Public School - Festival Celebration">
+            <p>Festival Celebration</p>
+          </div>
+        
+          
+        
+          <div>
+            <img src="/images/png/inter-School-Competitions.png" alt="Dav Public School - Inter-School Competitions">
+            <p>Inter-School Competitions</p>
+          </div>
+        
+          <div>
+            <img src="/images/png/Motivational-speaker.png" alt="Dav Public School - Motivational Speaker">
+            <p>Motivational Speaker</p>
+          </div>
+        
+          <div>
+            <img src="/images/png/music.png" alt="Dav Public School - Music">
+            <p>Music</p>
+          </div>
+        
+          <div>
+            <img src="/images/png/personality-development.png" alt="Dav Public School - Personality Development">
+            <p>Personality Development</p>
+          </div>
+       
+      </div>
+    
+    </div>
+  </Section>
+
+  <OtherClass />
+</Layout>
+
+<style lang="scss">
+ 
+
+  .activities{
+       display: grid;
+       grid-template-columns: repeat(4 , 200px);
+       place-content: center !important;
+       
+       row-gap: 2rem;
+       column-gap: 3rem;
+
+       @media screen and (max-width:991px) {
+        grid-template-columns: repeat(3 , 200px);
+       }
+
+       @media screen and (max-width:500px) {
+        grid-template-columns: repeat(1 , 300px);
+        .cards{
+            height: auto !important;
+            
+        }
+       }
+
+        >div{
+        background-color: rgb(234, 235, 235);
+        width: 100%;
+        height: 230px;
+        
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        padding: 2rem;
+        text-align: center ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        
+        gap: 0.7rem;
+
+        img{
+            max-width: 70px;
+        }
+        
+       }
+    }
+
+
+</style>

@@ -1,0 +1,144 @@
+---
+import SectionTitle from "./SectionTitle.astro";
+import Button from "./Button.astro";
+import HighlightsBanner from "./HighlightsBanner.astro";
+---
+
+<div class="hero">
+  <div class="hero-slider">
+    <div class="hero-slide">
+      <img src="/images/school.jpg" alt="" />
+      <div class="container">
+        <div class="content">
+          <div class="banner-title">
+           
+            
+"<span>Unlock Your Future</span> : Admission Open for a World of Opportunities!"
+          </div>
+          <Button title="Book a School Tour" link="/" variant="normal" />
+        </div>
+      </div>
+    </div>
+    <div class="hero-slide">
+      <img src="/images/school.jpg" alt="" />
+      <div class="container">
+        <div class="content">
+          <div class="banner-title">"<span>Explore, Enrich, Excel</span>  : Navigating Futures through Our Dynamic Courses!"</div>
+          <Button title="Learn more" link="/" variant="normal" />
+        </div>
+      </div>
+    </div>
+    <div class="hero-slide">
+      <img src="/images/school.jpg" alt="" />
+      <div class="container">
+        <div class="content">
+          <div class="banner-title"> " <span>Unlocking Potential, Igniting Minds</span> : Your Journey Begins Here!"</div>
+          <Button title="Learn more" link="/" variant="normal" />
+        </div>
+      </div>
+    </div>
+
+
+    <!-- <div class="hero-slide">
+      <img src="/images/school.jpg" alt="" />
+      <div class="container">
+        <div class="content">
+          <div class="banner-title">Admission</div>
+          <Button title="Learn more" link="/" variant="normal" />
+        </div>
+      </div>
+    </div>
+    <div class="hero-slide">
+      <img src="/images/school.jpg" alt="" />
+      <div class="container">
+        <div class="content">
+          <div>
+            <SectionTitle title="Events" />
+          </div>
+          <Button title="Learn more" link="/" variant="normal" />
+        </div>
+      </div>
+    </div>
+    <div class="hero-slide">
+      <img src="/images/school.jpg" alt="" />
+      <div class="container">
+        <div class="content">
+          <div>
+            <SectionTitle title="Events" />
+          </div>
+          <Button title="Learn more" link="/" variant="normal" />
+        </div>
+      </div>
+    </div>
+    <div class="hero-slide">
+      <img src="/images/school.jpg" alt="" />
+      <div class="container">
+        <div class="content">
+          <div>
+            <SectionTitle title="Events" />
+          </div>
+          <Button title="Learn more" link="/" variant="normal" />
+        </div>
+      </div>
+    </div> -->
+
+
+
+  </div>
+
+  <HighlightsBanner />
+</div>
+
+<style lang="scss">
+  .banner-title {
+    font-size: clamp(50px, 4vw, 60px);
+    line-height: 1.2;
+    font-weight: 500;
+
+    span{
+      color: var(--brown);
+    }
+  }
+  .hero {
+    height: 100vh;
+    position: relative;
+
+    @media screen and (max-width: 991px) {
+      height: auto;
+    }
+
+    .hero-slider {
+      width: 100%;
+      height: 100%;
+    }
+    .hero-slide {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+        filter: brightness(50%);
+      }
+
+      .content {
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        color: white;
+
+        align-items: flex-start;
+        justify-content: center;
+      }
+    }
+  }
+</style>

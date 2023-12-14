@@ -1,0 +1,121 @@
+---
+import OtherClass from "../components/OtherClass.astro";
+import PageBanner from "../components/PageBanner.astro";
+import Section from "../components/Section.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import Layout from "../layouts/Layout.astro";
+import Art from "../components/svgs/Art.astro";
+import AmenetiesSlider from "../components/AmenetiesSlider.astro";
+import SafetySlider from "../components/SafetySlider.astro";
+import Eventcard from "../components/Eventcard.astro";
+---
+
+<Layout title="Contact">
+  <PageBanner title="Events" />
+
+  <Section>
+    <div class="container">
+      <SectionTitle title="Events " subtitle="" substyle="" />
+
+    
+      <div class="events">
+        <div class="buttons">
+            <button class="tab-button active" data-target="div1">Upcoming</button>
+            <button class="tab-button" data-target="div2">Expired</button>
+        </div>
+
+        <div class="contents pt-5">
+            <div id="div1" class="tab-content">
+                <div class="events-display" >
+                    <Eventcard date="15" month="December" name=" Applying Natural Laws to Technology and Society" time="10:00 AM" image="/images/kids.jpg " link="/events/events-single"/>
+      
+                    <Eventcard date="15" month="December" name=" Applying Natural Laws to Technology and Society" time="10:00 AM" image="/images/kids.jpg "/>
+                </div>
+        
+                
+              </div>
+        
+              <div id="div2" class="tab-content hidden">
+                <div class="events-display"  >
+                    <Eventcard date="15" month="December" name=" Applying Natural Laws to Technology and Society" time="10:00 AM" image="/images/kids.jpg "/>
+      
+                    <Eventcard date="15" month="December" name=" Applying Natural Laws to Technology and Society" time="10:00 AM" image="/images/kids.jpg "/>
+                
+                </div>
+        
+              </div>
+        </div>
+      </div>
+
+    
+    </div>
+  </Section>
+
+
+
+ 
+
+  <!-- <OtherClass /> -->
+</Layout>
+<script>
+    const btns = document.querySelectorAll(".tab-button");
+  const contents = document.querySelectorAll(".tab-content");
+  
+  btns.forEach((button) => {
+      button.addEventListener("click", () => {
+          btns.forEach((btn) => btn.classList.remove("active"));
+          contents.forEach((content) => content.classList.add("hidden"));
+  
+          const target = button.getAttribute("data-target");
+          const targetContent = document.getElementById(target);
+  
+          button.classList.add("active");
+          targetContent.classList.remove("hidden");
+      });
+  });
+</script>
+<style lang="scss">
+    .buttons{
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+
+        button{
+            padding: 0;
+            background-color: transparent;
+            border: none;
+            font-size: 20px;
+    font-weight: 600;
+     transition: var(--transition)
+        }
+    }
+
+    .events-display{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+ .active {
+    
+    position: relative;
+    opacity: 100% !important;
+    color: var(--clr-medium) !important;
+    // padding-bottom: 12px !important;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0 auto;
+      width: 100%;
+      height: 2px;
+      background-color: var(--brown);
+    }
+  }
+  .hidden {
+    display: none;
+  }
+</style>

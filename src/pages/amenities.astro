@@ -1,0 +1,61 @@
+---
+import OtherClass from "../components/OtherClass.astro";
+import PageBanner from "../components/PageBanner.astro";
+import Section from "../components/Section.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import Layout from "../layouts/Layout.astro";
+import Art from "../components/svgs/Art.astro";
+import AmenetiesSlider from "../components/AmenetiesSlider.astro";
+import SafetySlider from '../components/SafetySlider.astro'
+---
+
+<Layout title="ameneties">
+  <PageBanner title="Amenities" />
+  <img
+    src="/images/kids.jpg"
+    alt="DAV public school Bangalore - grade6-8"
+    class="class-image"
+  />
+  <Section>
+    <div class="container">
+      <SectionTitle
+        title="Amenities"
+        subtitle=" The Nursery, LKG, and UKG curriculum focuses on developing gross and fine motor skills, phonics, strokes, English language, environmental studies,number work, Hindi language, music, Homa (ritual fire), yoga, Shlokas (sacred verses), sports, games, and field trips to provide a holistic learning experience."
+        substyle=""
+      />
+
+     <AmenetiesSlider />
+    </div>
+  </Section>
+
+
+  <Section>
+    <div class="container">
+      <SectionTitle
+        title="Campus Safety"
+        subtitle=" The Nursery, LKG, and UKG curriculum focuses on developing gross and fine motor skills, phonics, strokes, English language, environmental studies,number work, Hindi language, music, Homa (ritual fire), yoga, Shlokas (sacred verses), sports, games, and field trips to provide a holistic learning experience."
+        substyle=""
+      />
+
+      <SafetySlider />
+     
+    </div>
+  </Section>
+
+  <!-- <OtherClass /> -->
+</Layout>
+
+<style lang="scss">
+  .facility-slider {
+    // width: 80% !important;
+    background-color: red;
+    height: auto;
+  }
+
+  .ameneties-card {
+    background-color: green;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+</style>

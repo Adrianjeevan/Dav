@@ -1,0 +1,111 @@
+---
+import PageBanner from "../components/PageBanner.astro";
+import Section from "../components/Section.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import Layout from "../layouts/Layout.astro";
+
+---
+<Layout>
+    <PageBanner title="Gallery"/>
+    <Section>
+
+      <div class="container">
+        <SectionTitle title="Our Gallery"/>  
+            
+      <div class="gallery-slider">
+        <div class="gallery-slide">
+        
+          <a href="/images/1-5.jpg" data-fancybox="gallery">
+            <img src="/images/1-5.jpg" alt="Dav public school bangalore - Gallery">
+          </a>
+          
+        </div>
+        <div class="gallery-slide">
+        
+          <a href="/images/6-8.jpg" data-fancybox="gallery" >
+            <img src="/images/6-8.jpg" alt="Dav public school bangalore - Gallery">
+          </a>
+          
+        </div>
+        <div class="gallery-slide">
+        
+          <a href="/images/6-8.jpg" data-fancybox="gallery" >
+            <img src="/images/6-8.jpg" alt="Dav public school bangalore - Gallery">
+          </a>
+          
+        </div>
+        <div class="gallery-slide">
+        
+          <a href="/images/6-8.jpg" data-fancybox="gallery" >
+            <img src="/images/6-8.jpg" alt="Dav public school bangalore - Gallery">
+          </a>
+          
+        </div>
+        <div class="gallery-slide">
+        
+          <a href="/images/6-8.jpg" data-fancybox="gallery" >
+            <img src="/images/6-8.jpg" alt="Dav public school bangalore - Gallery">
+          </a>
+          
+        </div>
+        <div class="gallery-slide">
+        
+          <a href="/images/6-8.jpg" data-fancybox="gallery" >
+            <img src="/images/6-8.jpg" alt="Dav public school bangalore - Gallery">
+          </a>
+          
+        </div>
+        <div class="gallery-slide">
+        
+          <a href="/images/6-8.jpg" data-fancybox="gallery" >
+            <img src="/images/6-8.jpg" alt="Dav public school bangalore - Gallery">
+          </a>
+          
+        </div>
+      
+        
+      </div>
+
+      <div class="gallery-controls">
+        <div class="g-button prev">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+          </svg>
+     
+            
+        </div>
+        <div class="g-button next">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+          </svg>
+     
+            
+        </div>
+      </div>
+      </div>
+
+    </Section>
+</Layout>
+
+
+<style lang="scss">
+  .gallery-slide{
+    img{
+      width: 100%;
+    }
+  }
+
+  .gallery-controls{
+        display: flex;
+        padding: 1rem;
+        justify-content: center;
+        gap: 1rem;
+        
+        .g-button{
+            border: solid 1px black;
+            padding: 0.2rem 0.6rem;
+            cursor: pointer;
+        }
+    }
+</style>
