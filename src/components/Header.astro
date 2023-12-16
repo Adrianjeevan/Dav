@@ -98,12 +98,12 @@
     const currentScrollPosition = window.scrollY;
 
     if (currentScrollPosition > lastScrollPosition) {
-      header.classList.add("animate__fadeInDown");
+      // header.classList.add("animate__fadeInDown");
       if (window.location.pathname === "/") {
         document.querySelector(".m-icon").src = "/images/menu.png";
       }
     } else {
-      header.classList.remove("animate__fadeInDown");
+      // header.classList.remove("animate__fadeInDown");
       if (window.location.pathname === "/") {
         document.querySelector(".m-icon").src = "/images/new-menu.png";
       } else {
@@ -116,6 +116,7 @@
 
   window.addEventListener("scroll", function () {
     var header = document.querySelector("header");
+    header.classList.add("animate__fadeInDown" , window.scrollY < 0);
 
     header.classList.toggle("sticky", window.scrollY > 0);
   });
@@ -267,12 +268,12 @@
       .wrapper {
         position: relative;
         width: 80%;
-        padding: 2rem;
+        padding: 4rem 0;
         height: 100%;
         background-color: var(--brown);
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
 
         img {
           position: absolute;
