@@ -6,7 +6,7 @@ import Section from "./Section.astro";
 <Section>
     <div class="course" id="course">
         <div class="container">
-          <div class="d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center justify-content-between course-nav">
             <SectionTitle title="Popular Course​s" subtitle="Limitless learning, more possibilities" style="padding:3rem 0;"/>
         
             <div class="controls-container2">
@@ -25,6 +25,8 @@ import Section from "./Section.astro";
                    </svg>
              </div>
             </div>
+
+
           </div>
         
            <div class="course-slider">
@@ -209,5 +211,13 @@ import Section from "./Section.astro";
               }
             }
         }
+    }
+
+    @media screen and (max-width:500px) {
+      .course-nav{
+        flex-direction: column !important;
+        padding-bottom: 2rem;
+        // gap: 1rem;
+      }
     }
 </style>
