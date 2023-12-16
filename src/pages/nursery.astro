@@ -23,21 +23,21 @@ import Layout from "../layouts/Layout.astro";
                     <div>
                         <SectionTitle title="Curriculum"/>
                         <ul>
-                            <li>&rarr; Gross motor skills</li>
-                            <li>&rarr; Fine motor skills</li>
-                            <li>&rarr; Phonics</li>
-                            <li>&rarr; Strokes</li>
-                            <li>&rarr; English</li>
-                            <li>&rarr; Environment Studies</li>
-                            <li>&rarr; Number Work</li>
-                            <li>&rarr; Hindi</li>
-                            <li>&rarr; Music</li>
-                            <li>&rarr; Homa</li>
-                            <li>&rarr; Yoga</li>
-                            <li>&rarr; Shlokas</li>
-                            <li>&rarr; Sports</li>
-                            <li>&rarr; Games</li>
-                            <li>&rarr; Field Trip</li>
+                            <li><span>&#10148;</span> Fine motor skills</li>
+                            <li><span>&#10148;</span> Gross motor skills</li>
+                            <li><span>&#10148;</span> Phonics</li>
+                            <li><span>&#10148;</span> Strokes</li>
+                            <li><span>&#10148;</span> English</li>
+                            <li><span>&#10148;</span> Number Work</li>
+                            <li><span>&#10148;</span> Environment Studies</li>
+                            <li><span>&#10148;</span> Hindi</li>
+                            <li><span>&#10148;</span> Music</li>
+                            <li><span>&#10148;</span> Homa</li>
+                            <li><span>&#10148;</span> Yoga</li>
+                            <li><span>&#10148;</span> Shlokas</li>
+                            <li><span>&#10148;</span> Sports</li>
+                            <li><span>&#10148;</span> Games</li>
+                            <li><span>&#10148;</span> Field Trip</li>
                           </ul>
                           
                     </div>
@@ -106,6 +106,12 @@ import Layout from "../layouts/Layout.astro";
         list-style: none; 
         li{
             padding-bottom: 1rem;
+            display: flex;
+            gap: 20px;
+
+            span{
+                color: var(--brown);
+            }
         }
     }
 }

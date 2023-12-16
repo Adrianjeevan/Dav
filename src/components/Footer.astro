@@ -7,7 +7,7 @@ import Section from "./Section.astro";
     <footer>
 
         <div class="container">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center gy-5">
                 <div class="col-lg-3">
                     <img src="/images/logo.jpg" alt="" style="max-width: 80px;">
                     <div class="social pt-3">
@@ -67,10 +67,10 @@ import Section from "./Section.astro";
 </Section>
 
 <section class="copy">
-   <div class="container wrapper d-flex">
+   <div class="container wrapper ">
     <p> Copyrights©DavPublicSchool.All Rights Reserved.</p>
 
-    <p>Powered by <a href="">Brand Swift</a></p>
+    <p>Powered by <a href="https://brandswift.in/" class="brown" target="_blank">Brand Swift</a></p>
    </div>
  </section>
 
@@ -117,10 +117,21 @@ import Section from "./Section.astro";
        
         background-color: black;
         color: rgb(131, 130, 130);
-        font-size: 15px !important;
+        font-size: 14px !important;
 
         .wrapper{
+            display: flex;
             justify-content: space-between;
+            padding:1rem ;
+
+            @media screen and (max-width:500px) {
+            flex-direction: column;
+            gap: 10px;
+        } 
+
+
         }
+
+        
     }
 </style>

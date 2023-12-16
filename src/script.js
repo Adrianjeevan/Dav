@@ -198,6 +198,25 @@ if(document.querySelector('.gallery-slider')){
 });
 }
 
+$(document).ready(function () {
+  new PureCounter({
+    selector: ".purecounter",
+    start: 0,
+    end: 100,
+    duration: 2,
+    delay: 10,
+    once: true,
+    repeat: false,
+    decimals: 0,
+    legacy: true,
+    filesizing: false,
+    currency: false,
+    separator: false,
+  });
+
+
+});
+
 const mainContainer = document.getElementById("myCarousel");
 const mainOptions = {
   Dots: false,
@@ -237,47 +256,6 @@ new Carousel(navContainer, navOptions);
 // amenities
 
 
-const buttons = document.getElementById('menu-btn');
-const headers = document.getElementById('header');
-const menu = document.getElementById('menus');
-
-buttons.addEventListener('click', function() {
-    headers.classList.toggle('active');
-    menu.classList.toggle('left');
-    
- 
-    if (headers.classList.contains('active')) {
-    //   headers.style.backgroundColor = '#fff';
-      document.querySelector('.logo').src = '/images/logo-white.png';
-      document.querySelector('.menubar').src = '/images/close.png';      
-    } else {
-    //   headers.style.backgroundColor = '#fff';
-      document.querySelector('.logo').src = '/images/logo.png';
-      document.querySelector('.menubar').src = '/images/menu.png' ;
-    }
-
-
-
-  });
-
-  menu.addEventListener('click', function() {
-    headers.classList.toggle('active');
-    menu.classList.toggle('left');
-    
- 
-    if (headers.classList.contains('active')) {
-    //   headers.style.backgroundColor = '#fff';
-      document.querySelector('.logo').src = '/images/logo-white.png';
-      document.querySelector('.menubar').src = '/images/whitemenu.png';
-    } else {
-    //   headers.style.backgroundColor = '#fff';
-      document.querySelector('.logo').src = '/images/logo.png';
-      document.querySelector('.menubar').src = '/images/menu.png' ;
-    }
-
-
-
-  });
 
 
 

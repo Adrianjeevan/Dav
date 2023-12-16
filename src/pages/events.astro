@@ -10,8 +10,8 @@ import SafetySlider from "../components/SafetySlider.astro";
 import Eventcard from "../components/Eventcard.astro";
 ---
 
-<Layout title="Contact">
-  <PageBanner title="Events" />
+<Layout title="Events">
+  <PageBanner title="Events"/>
 
   <Section>
     <div class="container">
@@ -27,20 +27,26 @@ import Eventcard from "../components/Eventcard.astro";
         <div class="contents pt-5">
             <div id="div1" class="tab-content">
                 <div class="events-display" >
-                    <Eventcard date="15" month="December" name=" Applying Natural Laws to Technology and Society" time="10:00 AM" image="/images/kids.jpg " link="/events/events-single"/>
+                  <Eventcard date="20" month="December" name=" Gita Chanting Grade 1 - 5" time="10:00 AM" image="/images/kids.jpg "
+                   link="/events/gita1-5"/>
       
-                    <Eventcard date="15" month="December" name=" Applying Natural Laws to Technology and Society" time="10:00 AM" image="/images/kids.jpg "/>
+                  <Eventcard date="21" month="December" name=" Gita Chanting Grade 6 - 10" time="10:00 AM" image="/images/kids.jpg "  
+                  link="/events/gita6-10"/>
+            
+                  <Eventcard date="23" month="December" name="Annual Day Celebration" time="10:00 AM" image="/images/kids.jpg " 
+                  link="/events/annualday-23"/>
+                 
                 </div>
         
                 
               </div>
         
               <div id="div2" class="tab-content hidden">
-                <div class="events-display"  >
-                    <Eventcard date="15" month="December" name=" Applying Natural Laws to Technology and Society" time="10:00 AM" image="/images/kids.jpg "/>
+                <div class="events-display">
+                    <!-- <Eventcard date="15" month="December" name=" Applying Natural Laws to Technology and Society" time="10:00 AM" image="/images/amenities/VR-243.jpg "/>
       
-                    <Eventcard date="15" month="December" name=" Applying Natural Laws to Technology and Society" time="10:00 AM" image="/images/kids.jpg "/>
-                
+                    <Eventcard date="15" month="December" name=" Applying Natural Laws to Technology and Society" time="10:00 AM" image="/images/kids.jpg "/> -->
+                    
                 </div>
         
               </div>
@@ -57,7 +63,7 @@ import Eventcard from "../components/Eventcard.astro";
 
   <!-- <OtherClass /> -->
 </Layout>
-<script>
+<script is:inline >
     const btns = document.querySelectorAll(".tab-button");
   const contents = document.querySelectorAll(".tab-content");
   

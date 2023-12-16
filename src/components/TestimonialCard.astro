@@ -9,7 +9,7 @@ const {  name , role, message} = Astro.props
     </h5>
     <p>{role}</p> 
    </div>
-    <p>{message}</p>
+    <p class="message">{message}</p>
 </div>
 
 <style lang="scss">
@@ -21,9 +21,20 @@ const {  name , role, message} = Astro.props
         flex-direction: column;
         gap: 1rem ;
 
-        p{
+        @media screen and (max-width:500px) {
+            width: 100%;
+
+            .message{
+            width: 90% !important;
+            margin: 0 auto;
+            text-align: justify;
+        }
+        }
+
+        .message{
             width: 70%;
             margin: 0 auto;
+            
         }
     }
 </style>

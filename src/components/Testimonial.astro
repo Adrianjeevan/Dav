@@ -17,22 +17,22 @@ import "@fancyapps/ui/dist/carousel/carousel.css";
 
     <div class="f-carousel" id="myNavigation">
       <div class="f-carousel__slide">
-        <img src="/images/kids.jpg" alt="" />
+        <img src="/images/man.png" alt="" />
       </div>
       <div class="f-carousel__slide">
-        <img src="/images/kids.jpg" alt="" />
+        <img src="/images/Women.png" alt="" />
       </div>
       <div class="f-carousel__slide">
-        <img src="/images/kids.jpg" alt="" />
+        <img src="/images/man.png" alt="" />
       </div>
       <div class="f-carousel__slide">
-        <img src="/images/kids.jpg" alt="" />
+        <img src="/images/Women.png" alt="" />
       </div>
       <div class="f-carousel__slide">
-        <img src="/images/kids.jpg" alt="" />
+        <img src="/images/man.png" alt="" />
       </div>
       <div class="f-carousel__slide">
-        <img src="/images/kids.jpg" alt="" />
+        <img src="/images/Women.png" alt="" />
       </div>
     </div>
 
@@ -148,8 +148,14 @@ import "@fancyapps/ui/dist/carousel/carousel.css";
       }
     }
   }
+
+  #myCarousel{
+    .f-button{
+      display: none !important ;
+     }
+  }
   .f-carousel {
-    --f-button-display: none !important;
+    // --f-button-display: none !important;
     --f-button-width: 38px;
     --f-button-height: 38px;
 
@@ -165,5 +171,12 @@ import "@fancyapps/ui/dist/carousel/carousel.css";
     --f-button-bg: #fff;
     --f-button-hover-bg: #f9f9f9;
     --f-button-active-bg: #f0f0f0;
+
+
+    @media screen and (max-width: 500px) {
+      --f-button-width: 0px;
+    --f-button-height: 0px;
+
+    }
   }
 </style>

@@ -1,0 +1,56 @@
+---
+import Section from "./Section.astro";
+
+---
+
+<section class="booking-section">
+    <img src="/images/amenities/001.jpg" alt="" class="bg">
+    <div class="container">
+        <div class="booking">
+            <div class="row">
+                <div class="col-lg-4">
+                   <h5>Book a School Tour</h5>
+                  <div class="d-flex align-items-center"><h1>Best School in Bangalore</h1> </div> 
+                </div>
+                <div class="col-lg-6"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<style lang="scss">
+
+.booking-section{
+    position: relative;
+    padding: 7rem 0;
+    
+
+    
+}
+
+.bg{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(50%);
+        z-index: -2;
+
+    }
+    .booking{
+
+        .row{
+            color: white;
+            justify-content: space-between;
+            align-items: center;
+            h5{
+                font-size: clamp(35px,4vw, 40px);
+                font-weight: bolder;
+            }
+            h1{
+                font-size: 18px;
+            }
+        }
+    }
+</style>

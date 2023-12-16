@@ -4,11 +4,11 @@ import Layout from "../../layouts/Layout.astro";
 import SectionTitle from "../../components/SectionTitle.astro";
 import Section from "../../components/Section.astro";
 
-const names = "Events";
-const date = "12-12-23";
-const time = "Events";
+const names = "Gita Chanting Grade 6 - 10";
+const date = "21-12-23";
+const time = "10:00 : AM";
 const image = "/images/kids.jpg";
-const description = "lloreerjbgrhjbgwirhbghrvuwg";
+const description = names ;
 const upcoming = true;
 
 import EventSingleCard from "../../components/EventSingleCard.astro";
@@ -75,7 +75,7 @@ import EventSingleCard from "../../components/EventSingleCard.astro";
   </Section>
 </Layout>
 
-<script is:inline >
+<script is:inline>
   let countdownInterval;
 
   // Function to start the countdown with a target date
@@ -124,7 +124,7 @@ import EventSingleCard from "../../components/EventSingleCard.astro";
 
   // Start the countdown with the stored value or a default value
   window.onload = function () {
-    const defaultTargetDate = "2023-12-31"; // Change the default target date as needed
+    const defaultTargetDate = "2023-12-21"; // Change the default target date as needed
     const targetDateToUse = storedTargetDate || defaultTargetDate;
     startCountdown(targetDateToUse);
   };
