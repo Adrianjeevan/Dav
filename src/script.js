@@ -21,6 +21,7 @@ if(document.querySelector('.hero-slider')){
     autoplay: true,
     edgePadding: 0,
     gutter: 20,
+    mouseDrag:true,
     controls:false,
     autoplayButton:false,
     autoplayButtonOutput:false,

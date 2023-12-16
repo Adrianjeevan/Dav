@@ -1,4 +1,4 @@
----   
+---
 import SectionTitle from "./SectionTitle.astro";
 import Button from "./Button.astro";
 import HighlightsBanner from "./HighlightsBanner.astro";
@@ -7,37 +7,45 @@ import HighlightsBanner from "./HighlightsBanner.astro";
 <div class="hero">
   <div class="hero-slider">
     <div class="hero-slide">
-      <img src="/images/school.jpg" alt="" />
+      <img src="/images/amenities/SM-33.jpg" alt="Dav public school bangalore" />
       <div class="container">
         <div class="content">
           <div class="banner-title">
-           
-            
-"<span>Unlock Your Future</span> <br> Admission Open for a World of Opportunities!"
+            "<span>Unlock Your Future</span>
+            <br /> Admission Open for a World of Opportunities!"
           </div>
-          <Button title="Book a School Tour" link="/school-tour" variant="normal" />
+          <Button
+            title="Book a School Tour"
+            link="/contact"
+            variant="normal"
+          />
         </div>
       </div>
     </div>
     <div class="hero-slide">
-      <img src="/images/school.jpg" alt="" />
+      <img src="/images/amenities/SM-29.jpg" alt="Dav public school bangalore" />
       <div class="container">
         <div class="content">
-          <div class="banner-title">"<span>Explore, Enrich, Excel</span>  <br> Navigating Futures through Our Dynamic Courses!"</div>
+          <div class="banner-title">
+            "<span>Explore, Enrich, Excel</span>
+            <br /> Navigating Futures through Our Dynamic Courses!"
+          </div>
           <Button title="Learn more" link="#course" variant="normal" />
         </div>
       </div>
     </div>
     <div class="hero-slide">
-      <img src="/images/school.jpg" alt="" />
+      <img src="/images/amenities/SM-1.jpg" alt="Dav public school bangalore" />
       <div class="container">
         <div class="content">
-          <div class="banner-title"> " <span>Unlocking Potential, Igniting Minds</span> <br> Admission open for 2024 - 2025</div>
-          <Button title="Resgister now" link="/Contact us" variant="normal" />
+          <div class="banner-title">
+            " <span>Unlocking Potential, Igniting Minds</span>
+            <br /> Admission open for 2024 - 2025
+          </div>
+          <Button title="Resgister now" link="/contact" variant="normal" />
         </div>
       </div>
     </div>
-
 
     <!-- <div class="hero-slide">
       <img src="/images/school.jpg" alt="" />
@@ -81,9 +89,6 @@ import HighlightsBanner from "./HighlightsBanner.astro";
         </div>
       </div>
     </div> -->
-
-
-
   </div>
 
   <HighlightsBanner />
@@ -95,7 +100,7 @@ import HighlightsBanner from "./HighlightsBanner.astro";
     line-height: 1.2;
     font-weight: 500;
 
-    span{
+    span {
       color: var(--brown);
     }
   }

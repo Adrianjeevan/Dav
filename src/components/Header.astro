@@ -56,7 +56,7 @@
         <li><a href="/">Home</a></li>
         <li><a href="/admission">Admission</a></li>
         <li><a href="/about">About</a></li>
-        <li><a href="/about">Amenities</a></li>
+        <li><a href="/amenities">Amenities</a></li>
         <li class="submenu-wrapper"> <div class="d-flex align-items-center gap-4">Classes <span> &#x25BC;</span></div> 
         
           <ul class="subs pt-3 pb-3">
@@ -79,7 +79,7 @@
   </div>
 </div>
 
-<script is:inline>
+<script is:inline >
   const header = document.getElementById("header");
 
   let lastScrollPosition = 0;
@@ -100,8 +100,6 @@
     if (currentScrollPosition > lastScrollPosition) {
       header.classList.add("animate__fadeInDown");
       if (window.location.pathname === "/") {
-        document.querySelector(".m-icon").src = "/images/menu.png";
-      } else  {
         document.querySelector(".m-icon").src = "/images/menu.png";
       }
     } else {
