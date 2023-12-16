@@ -9,10 +9,10 @@ import SectionTitle from "./SectionTitle.astro";
         <SectionTitle title="Other Classes & Courses" classes="text-center"/>
         <div class="others">
             {
-                Astro.url.pathname !== '/nursery' ?  (<div>
+                Astro.url.pathname === '/nursery' ?  (null) : (<div>
                 <h5>Nursery,LKG,UKG</h5>  
                 <a href="/nursery">Know more</a>
-            </div>) : null
+            </div>)
             }
             
                 {
