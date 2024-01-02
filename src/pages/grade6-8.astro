@@ -8,32 +8,34 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Grade 6 - 8">
   <PageBanner title="Grade 6 - 8" />
-  <img src="/images/6-8.jpg" alt="DAV public school Bangalore - grade6-8" class="class-image"  />
+  <img
+    src="/images/6-8.jpg"
+    alt="DAV public school Bangalore - grade6-8"
+    class="class-image"
+  />
   <Section>
     <div class="container">
-      <SectionTitle
-        title="Grade 6 - 8"
-        subtitle=""
-        substyle=""
-      />
+      <SectionTitle title="Grade 6 - 8" subtitle="" substyle="" />
 
-      <div class="row lists justify-content-around align-items-start layout pt-5 gy-5">
+      <div
+        class="row lists justify-content-around align-items-start layout pt-5 gy-5"
+      >
         <div class="col-lg-3">
           <div class="content-wrapper">
             <SectionTitle title="Curriculum" style="padding:0;" />
             <div>
-                <h2>Languages <span>(Any two)</span> </h2>
-            <ul>
+              <h2>Languages <span>(Any two)</span></h2>
+              <ul>
                 <li><span>&#10148;</span> English</li>
                 <li><span>&#10148;</span> Hindi</li>
                 <li><span>&#10148;</span> Kannada</li>
                 <li><span>&#10148;</span> Sanskrit</li>
-            </ul>
+              </ul>
             </div>
 
-           <div>
-            <h2>Subjects</h2>
-            <ul>
+            <div>
+              <h2>Subjects</h2>
+              <ul>
                 <li><span>&#10148;</span>Mathematics</li>
                 <li><span>&#10148;</span>General Science</li>
                 <li><span>&#10148;</span>Social Science</li>
@@ -42,8 +44,8 @@ import Layout from "../layouts/Layout.astro";
                 <li><span>&#10148;</span>Computer Science</li>
                 <li><span>&#10148;</span>Value-Education</li>
                 <li><span>&#10148;</span>Hands-on Activity</li>
-            </ul>
-           </div>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="col-lg-5 d-flex flex-column gap-4">
@@ -52,13 +54,13 @@ import Layout from "../layouts/Layout.astro";
           <div>
             <p class="sub-title brown">Timings</p>
             <p>Monday to Friday - 8.40 am to 3.20 pm</p>
-            <p>Saturday – 8.40 am to 11.55 am – Grade VI to XII</p>
+            <p>Saturday – 8.40 am to 11.55 am</p>
           </div>
 
           <div>
             <p class="sub-title brown">Dress Code</p>
             <p>Monday, Tuesday, Thursday, Friday – Regular Uniform</p>
-            <p>Wednesday, Saturday – Track Suit</p>
+            <p>Wednesday, Saturday – House Dress</p>
           </div>
         </div>
       </div>
@@ -70,33 +72,32 @@ import Layout from "../layouts/Layout.astro";
 
 <style lang="scss">
   .lists {
-    >:nth-child(1){
-  background-color: aliceblue;
-  border-radius: 20px;
-  padding: 2rem;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-
->:nth-child(2){
-  background-color: aliceblue;
- padding: 2rem;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-    .content-wrapper{
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
+    > :nth-child(1) {
+      background-color: aliceblue;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
-    h2{
-        font-size: 22px;
-        padding-bottom: 10px;
-        color: var(--blue);
 
-        span{
-            font-size: 18px;
-        }
+    > :nth-child(2) {
+      background-color: aliceblue;
+      padding: 2rem;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    .content-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    h2 {
+      font-size: 22px;
+      padding-bottom: 10px;
+      color: var(--blue);
+
+      span {
+        font-size: 18px;
+      }
     }
     ul {
       list-style: none;
@@ -104,12 +105,10 @@ import Layout from "../layouts/Layout.astro";
         padding-bottom: 0.5rem;
         display: flex;
         gap: 15px;
-        span{
-            color: var(--brown);
+        span {
+          color: var(--brown);
         }
       }
     }
   }
-
-  
 </style>

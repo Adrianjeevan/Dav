@@ -36,12 +36,7 @@
         </ul>
 
         <div class="mobile-nav" id="menu-btn">
-          <img
-            src=""
-            alt=""
-            style="max-width: 25px;"
-            class="menubar m-icon"
-          />
+          <img src="" alt="" style="max-width: 25px;" class="menubar m-icon" />
         </div>
       </div>
     </div>
@@ -51,14 +46,17 @@
 <div class="mobile-menu" id="menus">
   <div class="wrapper">
     <div class="container">
-      <img src="/images/close.png" alt="" id="close"  />
+      <img src="/images/close.png" alt="" id="close" />
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/admission">Admission</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/amenities">Amenities</a></li>
-        <li class="submenu-wrapper"> <div class="d-flex align-items-center gap-4">Classes <span> &#x25BC;</span></div> 
-        
+        <li class="submenu-wrapper">
+          <div class="d-flex align-items-center gap-4">
+            Classes <span> &#x25BC;</span>
+          </div>
+
           <ul class="subs pt-3 pb-3">
             <li class=""><a href="/nursery">Nursery,LKG,UKG</a></li>
             <li class=""><a href="/grade1-5">Grade 1 - 5</a></li>
@@ -66,33 +64,29 @@
             <li class=""><a href="/grade9-10">Grade 9 - 10</a></li>
             <li class=""><a href="/grade11-12">Grade 11 - 12</a></li>
             <li class=""><a href="/extra-curricular">Extra-Curricular</a></li>
-          
           </ul>
         </li>
-          
+
         <li><a href="/gallery">Gallery</a></li>
         <li><a href="/events">Events</a></li>
         <li><a href="/contact">Contact</a></li>
-       
       </ul>
     </div>
   </div>
 </div>
 
-<script is:inline >
+<script is:inline>
   const header = document.getElementById("header");
 
   let lastScrollPosition = 0;
 
-  window.addEventListener('load' , ()=> {
+  window.addEventListener("load", () => {
     if (window.location.pathname === "/") {
-        document.querySelector(".m-icon").src = "/images/new-menu.png";
-      } else  {
-        document.querySelector(".m-icon").src = "/images/menu.png";
-      }
-  })
-  
-  
+      document.querySelector(".m-icon").src = "/images/new-menu.png";
+    } else {
+      document.querySelector(".m-icon").src = "/images/menu.png";
+    }
+  });
 
   window.addEventListener("scroll", () => {
     const currentScrollPosition = window.scrollY;
@@ -116,7 +110,7 @@
 
   window.addEventListener("scroll", function () {
     var header = document.querySelector("header");
-    header.classList.add("animate__fadeInDown" , window.scrollY < 0);
+    header.classList.add("animate__fadeInDown", window.scrollY < 0);
 
     header.classList.toggle("sticky", window.scrollY > 0);
   });
@@ -136,12 +130,12 @@
     menu.classList.toggle("left");
   });
 
-  const sub = document.querySelector('.submenu-wrapper')
-  const subs = document.querySelector('.subs')
+  const sub = document.querySelector(".submenu-wrapper");
+  const subs = document.querySelector(".subs");
 
-  sub.addEventListener('click', ()=> {
-    subs.classList.toggle('view')
-  })
+  sub.addEventListener("click", () => {
+    subs.classList.toggle("view");
+  });
 </script>
 
 <style lang="scss">
@@ -229,7 +223,7 @@
 
   .logo {
     // height: 100px;
-    width: 70px;
+    width: 100px;
     // display: inline-block;
     vertical-align: middle;
   }
@@ -279,7 +273,7 @@
           position: absolute;
           right: 20px;
           top: 20px;
-          width: 30px ;
+          width: 30px;
           object-fit: contain;
           height: 30px;
         }
@@ -292,17 +286,16 @@
         padding: 0;
         margin: 0;
         list-style: none;
-       
 
         li {
-          font-size:20px;
+          font-size: 20px;
           position: relative;
           color: white;
 
-          a{
+          a {
             color: white;
           }
-          
+
           font-family: var(--font-head);
           // &:after{
           //     content: '';
@@ -319,29 +312,24 @@
           // align-items: center;
           gap: 1rem;
           flex-direction: column;
-            span{
-              font-size: 10px;
-            }
-        }
-
-
-        
-
-        .subs{
-          display: none;
-
-          li{
-            padding-bottom: 20px;
-            
+          span {
+            font-size: 10px;
           }
         }
 
+        .subs {
+          display: none;
 
+          li {
+            padding-bottom: 20px;
+          }
+        }
       }
     }
   }
 
   .sticky {
+    
     background-color: white !important;
     .row {
       img {
@@ -359,9 +347,8 @@
     left: 0 !important;
   }
 
-  .view{
+  .view {
     display: block !important;
     position: relative;
-   
   }
 </style>
