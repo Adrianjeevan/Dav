@@ -1,59 +1,98 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Hero from '../components/Hero.astro';
-import Course from '../components/Course.astro';
-import Whyus from '../components/Whyus.astro';
-import Events from '../components/Events.astro';
-import Testimonial from '../components/Testimonial.astro';
-import BookingSection from '../components/BookingSection.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Hero from "../components/Hero.astro";
+import Course from "../components/Course.astro";
+import Whyus from "../components/Whyus.astro";
+import Events from "../components/Events.astro";
+import Testimonial from "../components/Testimonial.astro";
+import BookingSection from "../components/BookingSection.astro";
+import Section from "../components/Section.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import Contact from "./contact.astro";
 ---
 
 <Layout title="DAV PUBLIC SCHOOL BANGALORE">
-  
-	<Hero />
-	<Course/>
-	<Whyus/>
-	<Events/>
-	<Testimonial/>
+  <Hero />
+  <Course />
+  <Whyus />
+  <Events />
+  <Testimonial />
+
+  <Section style="padding-bottom:7rem;">
+    <SectionTitle
+      title="Our Newsletters"
+      subtitle="Stay Informed, Stay Inspired: Your Weekly Dose of Knowledge and Inspiration!"
+      classes="text-center"
+      substyle="margin:0 auto;"
+    />
+
+    <div class="container">
+      <div class="d-flex justify-content-center news pt-4">
+        <p>
+          <a
+            href="/images/October-23.pdf"
+            download="Newsletter-oct-one"
+            class="normal">Download Newsletter-October-23-24</a
+          >
+        </p>
+        <p>
+          <a
+            href="/images/newsletter-oct-23-24-2.pdf"
+            download="Newsletter-oct-second"
+            class="normal">Download Newsletter-October-23-24(2)</a
+          >
+        </p>
+        <p>
+          <a
+            href="/images/newsletter-april-22-23.pdf"
+            download="Newsletter-April-22-23"
+            class="normal">Download Newsletter-April-22-23</a
+          >
+        </p>
+      </div>
+    </div>
+  </Section>
   <!-- <BookingSection/> -->
-
-
 </Layout>
 
 <style lang="scss">
+  .news {
+    gap: 2rem;
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+    }
+  }
 
-.f-carousel__slide.is-nav-selected {
-        color: #fff;
-        background: #ff3520;
-      }
+  .f-carousel__slide.is-nav-selected {
+    color: #fff;
+    background: #ff3520;
+  }
 
-
-	  
-#myNavigation {
-        --f-carousel-slide-width: 100px;
-        --f-carousel-spacing: 5px;
+  #myNavigation {
+    --f-carousel-slide-width: 100px;
+    --f-carousel-spacing: 5px;
     //    background-color:red;
-		width:300px;
-		
-      }
-.f-carousel {
-	--f-button-display:none !important;
-  --f-button-width: 38px;
-  --f-button-height: 38px;
+    width: 300px;
+  }
+  .f-carousel {
+    --f-button-display: none !important;
+    --f-button-width: 38px;
+    --f-button-height: 38px;
 
-  --f-button-svg-width: 0px;
-  --f-button-svg-height: 16px;
-  --f-button-svg-stroke-width: 2.5;
+    --f-button-svg-width: 0px;
+    --f-button-svg-height: 16px;
+    --f-button-svg-stroke-width: 2.5;
 
-  --f-button-color: rgb(71 85 105);
-  --f-button-border-radius: 50%;
-  --f-button-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%), 0 3px 7px -3px rgb(0 0
-          0 / 30%);
+    --f-button-color: rgb(71 85 105);
+    --f-button-border-radius: 50%;
+    --f-button-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%),
+      0 3px 7px -3px rgb(0 0 0 / 30%);
 
-  --f-button-bg: #fff;
-  --f-button-hover-bg: #f9f9f9;
-  --f-button-active-bg: #f0f0f0;
-}
-      
+    --f-button-bg: #fff;
+    --f-button-hover-bg: #f9f9f9;
+    --f-button-active-bg: #f0f0f0;
+  }
 </style>

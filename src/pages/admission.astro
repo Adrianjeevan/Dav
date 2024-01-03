@@ -9,11 +9,16 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Admissions">
     <PageBanner title="Admissions"/>
+    <div class="adm-banner">
+        <img src="/images/reception-new.jpg" alt="">
+    </div> 
     <Section>
-       <div class="container">
-        <SectionTitle title="Admission Procedure"/>
+      
+      
 
-        <div class="admission">
+       <div class="container">
+        <SectionTitle title="Admission Procedure" style="padding:0;"/>
+        <div class="admission pt-5 pb-5">
             <ul>
                 <li><div class="sub-title">Call us:</div> Initiate the admission process by reaching out to our dedicated admissions team via phone. Our friendly and knowledgeable staff are ready to assist you with any queries and guide you through the next steps.</li>
              
@@ -31,6 +36,17 @@ import Layout from "../layouts/Layout.astro";
              </ul>
              
              
+        </div>
+
+        <div class="d-flex flex-column gap-3">
+            <p class="sub-title">Call Us to Schedule a Visit.</p>
+            <div class="d-flex flex-column gap-1">
+             <p> <a href="tel:+917338522728" class="normal">+91 7338522728</a></p>
+              <br />
+             <p> <a href="tel:+917899762728" class="normal">+91 7899762728</a></p>
+              <br />
+              <a href="mailto:davbangalore@gmail.com" style="text-decoration: underline;">davbangalore@gmail.com</a>
+            </div>
         </div>
        </div>
     </Section>
@@ -54,4 +70,36 @@ import Layout from "../layouts/Layout.astro";
             }
         }
     }
+
+    .adm-banner{
+        height: 50vh;
+          img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+    }
+
+
+    .normal{
+        font-size: 16px;
+        line-height: 1 ;
+        margin: 0;
+        padding: 0.8rem 1.3rem;
+        background-color: brown; 
+        border-radius: 5px;
+        color: white;
+        transition: var(--transition);
+
+        @media screen and (max-width:500px) {
+            font-size: 13px;
+        }
+
+
+        &:hover{
+            background-color: rgb(159, 63, 63);
+            
+        }
+    }
+
 </style>

@@ -7,14 +7,14 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="About">
   <PageBanner title="About" />
-
+  <div class="statue" style="">
+    <img src="/images/statue.JPG" alt="" >
+  </div>
   <Section>
     <div class="container">
       <!-- <SectionTitle title="About Us" /> -->
 
-      <div class="statue" style="padding-bottom: 4rem;">
-        <img src="/images/statue.JPG" alt="" >
-      </div>
+     
       <SectionTitle
         title="DAYANANDA ARYA VIDYA PUBLIC SCHOOL"
         classes="text-center"
@@ -289,7 +289,8 @@ import Layout from "../layouts/Layout.astro";
 <style lang="scss">
 
   .statue{
-    height: 50vh;
+    height: 60vh;
+    background-color: red;
     img{
       width: 100%;
       height: 100%;

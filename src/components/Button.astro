@@ -6,7 +6,8 @@ const { title, link, classes, variant } = Astro.props
     {variant === 'normal' ? (<a href={link} class="normal">{title}</a>) : (<a href={link} class="light">{title}</a>)}
 </div>
 
-<style lang="scss" is:global  >
+<style lang="scss" is:global >
+    
     .normal{
         font-size: 16px;
         line-height: 1 ;
