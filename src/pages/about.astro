@@ -8,7 +8,9 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="About">
   <PageBanner title="About" />
   <div class="statue" style="">
-    <img src="/images/statue.JPG" alt="" >
+    <a href="/images/statue.JPG" data-fancybox="gallery">
+      <img src="/images/statue.JPG" alt="" >
+    </a>
   </div>
   <Section>
     <div class="container">
@@ -164,6 +166,8 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </Section>
 
+
+
   <Section>
   <div class="container">
     <SectionTitle title="Dav Governing Coucil Members" classes="text-center"/>
@@ -284,9 +288,40 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </div>
   </Section>
+
+  <Section>
+    <SectionTitle title="Our Dedicated Staffs" classes="text-center" 
+    subtitle=" Sculpting Minds, Shaping Futures: Educators for Excellence!" substyle="margin:0 auto;"> 
+
+    </SectionTitle>
+
+    
+  <div class="staffs">
+  <a href="/images/staffs-new.jpg" data-fancybox="gallery">
+    <img src="/images/staffs-new.jpg" alt="">
+  </a>
+  </div>
+  </Section>
 </Layout>
 
 <style lang="scss">
+
+  .staffs{
+    height: 600px;
+    @media screen and (max-width:500px) {
+      height: auto;
+      }
+
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+
+      @media screen and (max-width:500px) {
+        object-fit: contain;
+      }
+    }
+  }
 
   .statue{
     height: 60vh;
@@ -471,9 +506,9 @@ import Layout from "../layouts/Layout.astro";
         flex-direction: column;
         gap: 1rem;
         .images{
-            width: 300px;
-            height: 300px;
-            border-radius: 300px;
+            width: 200px;
+            height: 200px;
+            border-radius: 200px;
             overflow: hidden;
             border: dashed 2px var(--brown);
             padding: 10px;
