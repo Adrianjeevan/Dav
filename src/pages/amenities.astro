@@ -11,11 +11,15 @@ import SafetySlider from '../components/SafetySlider.astro'
 
 <Layout title="Ameneties">
   <PageBanner title="Amenities" />
-  <img
+   <div class="amenities-banner">
+   <a href="/images/amenities-banner.jpg" data-fancybox="gallery">
+    <img
     src="/images/amenities-banner.jpg"
     alt="DAV public school Bangalore - grade6-8"
     class="class-image"
   />
+   </a>
+   </div>
   <Section>
     <div class="container">
       <SectionTitle
@@ -57,5 +61,23 @@ import SafetySlider from '../components/SafetySlider.astro'
     display: flex !important;
     justify-content: center;
     align-items: center;
+  }
+
+  .amenities-banner{
+    
+    // height: 50vh;
+a{
+  
+  img{
+      width: 100%;
+      height: 100%;
+      aspect-ratio:900 / 200 ; 
+      // object-fit: contain;
+
+      @media screen and (max-width:500px) {
+        aspect-ratio: 1400 / 450 ; 
+      }
+    }
+}
   }
 </style>
