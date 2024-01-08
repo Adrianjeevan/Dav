@@ -1,0 +1,209 @@
+---
+import Layout from "../layouts/Layout.astro"
+
+import Section from "../components/Section.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+---
+
+<Layout title="Disclosure">
+    <div class="disclosure-section">
+        <div class="container">
+            <SectionTitle title="CBSE Mandatory Disclosure" classes="text-center" style="padding-bottom:3rem;"/>
+            <div class="disclosure">
+                <ul>
+                    <li>
+                        <div>
+                            <div>
+                                <p>ACADEMIC CALENDAR</p>
+                            </div>
+                            <div>
+                                <a href="/images/calendar.pdf" download="Academic_Calendar.pdf">click here</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div>
+                                <p>BUILDING SAFETY CERTIFICATE</p>
+                            </div>
+                            <div>
+                                <a href="/images/building.pdf" download="Building_Safety_Certificate.pdf">click here</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div>
+                                <p>CERTIFICATE OF LAND</p>
+                            </div>
+                            <div>
+                                <a href="/images/land.pdf" download="Certificate_of_Land.pdf">click here</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div>
+                                <p>DEO CERTIFICATE</p>
+                            </div>
+                            <div>
+                                <a href="/images/deo_certificate.pdf" download="DEO_Certificate.pdf">click here</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div>
+                                <p>FIRE SAFETY CERTIFICATE</p>
+                            </div>
+                            <div>
+                                <a href="/images/fire-safety.pdf" download="Fire_Safety_Certificate.pdf">click here</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div>
+                                <p>GOOD HEALTH & HYGIENE CERTIFICATE</p>
+                            </div>
+                            <div>
+                                <a href="/images/hygene.pdf" download="Good_Health_Hygiene_Certificate.pdf">click here</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div>
+                                <p>HEALTH AND SANITIZATION CERTIFICATE</p>
+                            </div>
+                            <div>
+                                <a href="/images/health.pdf" download="Health_Sanitization_Certificate.pdf">click here</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div>
+                                <p>NOC</p>
+                            </div>
+                            <div>
+                                <a href="/images/noc.pdf" download="NOC.pdf">click here</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div>
+                                <p>PARENT-TEACHER ASSOCIATION</p>
+                            </div>
+                            <div>
+                                <a href="/images/pta.pdf" download="Parent_Teacher_Association.pdf">click here</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div>
+                                <p>SCHOOL RECOGNITION CERTIFICATE</p>
+                            </div>
+                            <div>
+                                <a href="/images/recognition.pdf" download="School_Recognition_Certificate.pdf">click here</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div>
+                                <p>RESULT</p>
+                            </div>
+                            <div>
+                                <a href="/images/result.pdf" download="Result.pdf">click here</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div>
+                                <p>SCHOOL MANAGEMENT COMMITTEE</p>
+                            </div>
+                            <div>
+                                <a href="/images/management_committee.pdf" download="School_Management_Committee.pdf">click here</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div>
+                                <p>WATER HEALTH CERTIFICATE</p>
+                            </div>
+                            <div>
+                                <a href="/images/water_health.pdf" download="Water_Health_Certificate.pdf">click here</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+
+</Layout>
+
+<style lang="scss">
+    .disclosure-section{
+      margin-top: var(--header-height);
+      padding: 5rem 0;
+
+    //   height: 80vh;
+
+      .disclosure{
+        height: 100%;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center ;
+
+
+        ul{
+            height: 100%;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            list-style: none;
+            // gap: 2rem;
+            // align-items: center;
+
+            @media screen and (max-width:500px) {
+                width: 100%;
+            }
+
+            li{
+                >:nth-child(1){
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    border-bottom: solid 2px var(--brown);
+                    padding: 1rem;
+                    transition: all 0.3s ease;
+                    cursor: pointer;
+                    
+                    // justify-content: center;
+
+                    @media screen and (max-width:500px) {
+               p, a{
+                font-size: 12px;
+               }
+            }
+
+                    &:hover{
+                        background-color: var(--brown);
+                        color: white;
+                    }
+                }
+            }
+        }
+      }
+    }
+</style>

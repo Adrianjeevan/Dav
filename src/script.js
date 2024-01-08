@@ -8,7 +8,28 @@ import { Carousel } from '@fancyapps/ui';
 
 
 
+let headerHeight = document.querySelector("header").offsetHeight;
 
+
+// set css variable header-height to the height of <header>
+document.documentElement.style.setProperty(
+  "--header-height",
+  headerHeight + "px"
+);
+if (document.querySelector(".first-fold-wrapper")) {
+  if (window.innerWidth < 768) {
+    document.querySelector("header").nextElementSibling.style.marginTop =
+      headerHeight + "px";
+    // add headerHeight to .first-fold
+    document.querySelector(".first-fold-wrapper").style.marginTop =
+      headerHeight + "px";
+  } else {
+    document.querySelector(".first-fold-wrapper").style.marginTop =
+      headerHeight + "px";
+    document.querySelector("header").nextElementSibling.style.marginTop =
+      headerHeight + "px";
+  }
+}
 
 
 
