@@ -95,6 +95,45 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </Section>
 
+  <Section>
+    <SectionTitle title="Principal's Message" classes="text-center" style="padding-bottom:3rem;" />
+   <div class="container">
+      <div class="row principal gy-4 gx-5">
+        <div class="col-lg-5">
+          <img src="/images/principal.jpg" alt="">
+        </div>
+        <div class="col-lg-5">
+          <div class="name">
+            Malini Ashok
+          </div>
+          <h6>
+            Principal
+          </h6>
+
+          <div class="quote pt-3 pb-4">
+            “All the world’s a stage. And we are mere Players.” <br>
+
+            <span> - William Shakespeare 
+            </span>
+          </div>
+
+          <p>
+            We, at DAV set up a stage for children to trudge along until they find their confident 
+            footing. 
+            Facilitators try to make this journey together, learning and succeeding together, 
+            faltering and correcting together to make them worthy and capable citizens. 
+            This is evidently seen in the shining results in academics, achievements in sports at 
+            State and National levels, Inter School Competitions and many other programs. 
+            With all support from teachers, non- teaching staff and parents, we make this stage a 
+            better one for finer and bigger acts in life in the coming years. 
+            Remember, success is not final. Success is not resting on laurels, but finding new 
+            laurels to rest upon. 
+          </p>
+        </div>
+      </div>
+   </div>
+  </Section>
+
   <Section style="background-color:aliceblue;">
     <div class="container">
       <SectionTitle
@@ -305,6 +344,33 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <style lang="scss">
+
+  .principal{
+    // align-items: center;
+    justify-content: center;
+    
+    img{
+      width: 100%;
+      height: 100%;
+    }
+
+    .name{
+      font-size: 25px;
+      font-weight: 600;
+      color:var(--brown);
+    }
+
+    .quote{
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.3;
+
+      span{
+        font-size: 16px;
+      }
+    }
+
+  }
 
   .staffs{
     height: 600px;

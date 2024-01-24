@@ -2733,6 +2733,11 @@ simple-get@^4.0.0, simple-get@^4.0.1:
     once "^1.3.1"
     simple-concat "^1.0.0"
 
+simple-lightbox@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.npmjs.org/simple-lightbox/-/simple-lightbox-2.1.0.tgz"
+  integrity sha512-cfIe4fKEA/qObvOKs1mbMCOhKYAClFrdZyWjZ+BJFyWOeg+ckjhydM+JajCL+nF9GRcidqfv15BYl3gfbzawXQ==
+
 simple-swizzle@^0.2.2:
   version "0.2.2"
   resolved "https://registry.npmjs.org/simple-swizzle/-/simple-swizzle-0.2.2.tgz"

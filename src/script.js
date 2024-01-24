@@ -1,15 +1,10 @@
 import { tns } from "tiny-slider/src/tiny-slider";
-
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import { Fancybox } from "@fancyapps/ui";
 
-
-
-import { Carousel } from '@fancyapps/ui';
-
-
+Fancybox.bind();
 
 let headerHeight = document.querySelector("header").offsetHeight;
-
 
 // set css variable header-height to the height of <header>
 document.documentElement.style.setProperty(
@@ -31,57 +26,49 @@ if (document.querySelector(".first-fold-wrapper")) {
   }
 }
 
-
-
-
-if(document.querySelector('.hero-slider')){
+if (document.querySelector(".hero-slider")) {
   var slider = tns({
-    container: '.hero-slider',
+    container: ".hero-slider",
     items: 1,
     slideBy: 1,
     autoplay: true,
     edgePadding: 0,
     gutter: 20,
-    mouseDrag:true,
-    controls:false,
-    autoplayButton:false,
-    autoplayButtonOutput:false,
-    
-    
-    animateIn: 'fadeInDown',
-    animateOut: 'fadeOutDown',
+    mouseDrag: true,
+    controls: false,
+    autoplayButton: false,
+    autoplayButtonOutput: false,
+
+    animateIn: "fadeInDown",
+    animateOut: "fadeOutDown",
     // controlsContainer:'.controls-container',
     nav: false,
     animateDelay: 700,
   });
 }
 
-
-
-
-
-if(document.querySelector('.course-slider')){
+if (document.querySelector(".course-slider")) {
   var slider = tns({
-    container: '.course-slider',
+    container: ".course-slider",
     items: 4,
     slideBy: 1,
     autoplay: false,
     edgePadding: 20,
     gutter: 40,
-    speed:200,
-    controls:true,
-    controlsContainer:'.controls-container2',
+    speed: 200,
+    controls: true,
+    controlsContainer: ".controls-container2",
     nav: false,
     responsive: {
       0: {
         edgePadding: 0,
         gutter: 0,
-        items: 1
+        items: 1,
       },
       640: {
         edgePadding: 0,
         gutter: 0,
-        items: 1
+        items: 1,
       },
       700: {
         gutter: 30,
@@ -90,38 +77,35 @@ if(document.querySelector('.course-slider')){
       900: {
         items: 4,
         gutter: 40,
-      }
+      },
     },
-   });
+  });
 }
-  
 
-
-
-if(document.querySelector('.safety-slider')){
+if (document.querySelector(".safety-slider")) {
   var slider = tns({
-    container: '.safety-slider',
-    
+    container: ".safety-slider",
+
     slideBy: 1,
     autoplay: false,
     edgePadding: 0,
     // navContainer: ".nav-container",
-    // navAsThumbnails: false, 
-    nav:false,
-    autoplayButton:false,
-    autoplayButtonOutput:false,
-    controls:true,
-    controlsContainer:'.controls-containers2',
+    // navAsThumbnails: false,
+    nav: false,
+    autoplayButton: false,
+    autoplayButtonOutput: false,
+    controls: true,
+    controlsContainer: ".controls-containers2",
     responsive: {
       0: {
         edgePadding: 0,
         gutter: 0,
-        items: 1
+        items: 1,
       },
       640: {
         edgePadding: 0,
         gutter: 0,
-        items: 1
+        items: 1,
       },
       700: {
         gutter: 30,
@@ -129,41 +113,36 @@ if(document.querySelector('.safety-slider')){
       },
       900: {
         items: 3,
-        gutter: 10, 
-        
-      }
+        gutter: 10,
+      },
     },
-   
-    
-});
+  });
 }
 
-Fancybox.bind()
-
-if(document.querySelector('.facility-slider')){
+if (document.querySelector(".facility-slider")) {
   var slider = tns({
-    container: '.facility-slider',
-    
+    container: ".facility-slider",
+
     slideBy: 1,
     autoplay: false,
     edgePadding: 0,
     // navContainer: ".nav-container",
-    // navAsThumbnails: false, 
-    nav:false,
-    autoplayButton:false,
-    autoplayButtonOutput:false,
-    controls:true,
-    controlsContainer:'.controls-containers',
+    // navAsThumbnails: false,
+    nav: false,
+    autoplayButton: false,
+    autoplayButtonOutput: false,
+    controls: true,
+    controlsContainer: ".controls-containers",
     responsive: {
       0: {
         edgePadding: 0,
         gutter: 0,
-        items: 1
+        items: 1,
       },
       640: {
         edgePadding: 0,
         gutter: 0,
-        items: 1
+        items: 1,
       },
       700: {
         gutter: 30,
@@ -171,39 +150,36 @@ if(document.querySelector('.facility-slider')){
       },
       900: {
         items: 3,
-        gutter: 10, 
-        
-      }
+        gutter: 10,
+      },
     },
-   
-    
-});
+  });
 }
 
-if(document.querySelector('.gallery-slider')){
+if (document.querySelector(".gallery-slider")) {
   var slider = tns({
-    container: '.gallery-slider',
-    
+    container: ".gallery-slider",
+
     slideBy: 1,
     autoplay: false,
     edgePadding: 0,
     // navContainer: ".nav-container",
-    // navAsThumbnails: false, 
-    nav:false,
-    autoplayButton:false,
-    autoplayButtonOutput:false,
-    controls:true,
-    controlsContainer:'.gallery-controls',
+    // navAsThumbnails: false,
+    nav: false,
+    autoplayButton: false,
+    autoplayButtonOutput: false,
+    controls: true,
+    controlsContainer: ".gallery-controls",
     responsive: {
       0: {
         edgePadding: 0,
         gutter: 0,
-        items: 1
+        items: 1,
       },
       640: {
         edgePadding: 0,
         gutter: 0,
-        items: 1
+        items: 1,
       },
       700: {
         gutter: 30,
@@ -211,13 +187,10 @@ if(document.querySelector('.gallery-slider')){
       },
       900: {
         items: 3,
-        gutter: 10, 
-        
-      }
+        gutter: 10,
+      },
     },
-   
-    
-});
+  });
 }
 
 $(document).ready(function () {
@@ -235,14 +208,12 @@ $(document).ready(function () {
     currency: false,
     separator: false,
   });
-
-
 });
 
 const mainContainer = document.getElementById("myCarousel");
 const mainOptions = {
   Dots: false,
-  transition: 'slide' ,
+  transition: "slide",
   Autoplay: {
     timeout: 3000,
   },
@@ -253,7 +224,7 @@ const mainCarousel = new Carousel(mainContainer, mainOptions);
 const navContainer = document.getElementById("myNavigation");
 const navOptions = {
   infinite: true,
-  transition: 'slide' ,
+  transition: "slide",
   center: true,
   fill: true,
   Autoplay: {
@@ -262,31 +233,17 @@ const navOptions = {
   slidesPerPage: 1,
   dragFree: true,
   Navigation: false,
-  button:false,
+  button: false,
 
   Dots: false,
-  
+
   Sync: {
     target: mainCarousel,
   },
 };
 
-new Carousel(navContainer, navOptions);  
+new Carousel(navContainer, navOptions);
 
 // amenities
 
 // amenities
-
-
-
-
-
-
-
-
-
-
-
-   
-
-  

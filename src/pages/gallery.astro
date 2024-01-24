@@ -4,6 +4,96 @@ import Section from "../components/Section.astro";
 import SectionTitle from "../components/SectionTitle.astro";
 import Layout from "../layouts/Layout.astro";
 
+
+
+
+const gallerys = [
+  { "images": "/images/gallery (1).jpg" },
+  { "images": "/images/gallery (2).jpg" },
+  { "images": "/images/gallery (3).jpg" },
+  { "images": "/images/gallery (4).jpg" },
+  { "images": "/images/gallery (5).jpg" },
+  { "images": "/images/gallery (6).jpg" },
+  { "images": "/images/gallery (7).jpg" },
+  { "images": "/images/gallery (8).jpg" },
+  { "images": "/images/gallery (9).jpg" },
+  { "images": "/images/gallery (10).jpg" },
+  { "images": "/images/gallery (11).jpg" },
+  { "images": "/images/gallery (12).jpg" },
+  { "images": "/images/gallery (13).jpg" },
+  { "images": "/images/gallery (14).jpg" },
+  { "images": "/images/gallery (15).jpg" },
+  { "images": "/images/gallery (16).jpg" },
+  { "images": "/images/gallery (17).jpg" },
+  { "images": "/images/gallery (18).jpg" },
+  { "images": "/images/gallery (19).jpg" },
+  { "images": "/images/gallery (20).jpg" },
+  { "images": "/images/gallery (21).jpg" },
+  { "images": "/images/gallery (22).jpg" },
+  { "images": "/images/gallery (23).jpg" },
+  { "images": "/images/gallery (24).jpg" },
+  { "images": "/images/gallery (25).jpg" },
+  { "images": "/images/gallery (26).jpg" },
+  { "images": "/images/gallery (27).jpg" },
+  { "images": "/images/gallery (28).jpg" },
+  { "images": "/images/gallery (29).jpg" },
+  { "images": "/images/gallery (30).jpg" },
+  { "images": "/images/gallery (31).jpg" },
+  { "images": "/images/gallery (32).jpg" },
+  { "images": "/images/gallery (33).jpg" },
+  { "images": "/images/gallery (34).jpg" },
+  { "images": "/images/gallery (35).jpg" },
+  { "images": "/images/gallery (36).jpg" },
+  { "images": "/images/gallery (37).jpg" },
+  { "images": "/images/gallery (38).jpg" },
+  { "images": "/images/gallery (39).jpg" },
+  { "images": "/images/gallery (40).jpg" },
+  { "images": "/images/gallery (41).jpg" },
+  { "images": "/images/gallery (42).jpg" },
+  { "images": "/images/gallery (43).jpg" },
+  { "images": "/images/gallery (44).jpg" },
+  { "images": "/images/gallery (45).jpg" },
+  { "images": "/images/gallery (46).jpg" },
+  { "images": "/images/gallery (47).jpg" },
+  { "images": "/images/gallery (48).jpg" },
+  { "images": "/images/gallery (49).jpg" },
+  { "images": "/images/gallery (50).jpg" },
+  { "images": "/images/gallery (51).jpg" },
+  { "images": "/images/gallery (52).jpg" },
+  { "images": "/images/gallery (53).jpg" },
+  { "images": "/images/gallery (54).jpg" },
+  { "images": "/images/gallery (55).jpg" },
+  { "images": "/images/gallery (56).jpg" },
+  { "images": "/images/gallery (57).jpg" },
+  { "images": "/images/gallery (58).jpg" },
+  { "images": "/images/gallery (59).jpg" },
+  { "images": "/images/gallery (60).jpg" },
+  { "images": "/images/gallery (61).jpg" },
+  { "images": "/images/gallery (62).jpg" },
+  { "images": "/images/gallery (63).jpg" },
+  { "images": "/images/gallery (64).jpg" },
+  { "images": "/images/gallery (65).jpg" },
+  { "images": "/images/gallery (66).jpg" }
+];
+
+console.log(gallerys);
+
+
+
+
+
+const mentorsArray = [];
+let i,
+  j,
+  temparray,
+  chunk =  3 
+for (i = 0, j = gallerys.length; i < j; i += chunk) {
+  temparray = gallerys.slice(i, i + chunk);
+  mentorsArray.push(temparray);
+}
+
+  
+
 ---
 <Layout title="Gallery" >
     <PageBanner title="Gallery"/>
@@ -13,224 +103,21 @@ import Layout from "../layouts/Layout.astro";
         <SectionTitle title="Our Gallery"/>  
             
       <div class="gallery-slider">
-        <div class="gallery-slide">
-        
-          <a href="/images/1-5.jpg" data-fancybox="gallery">
-            <img src="/images/1-5.jpg" alt="Dav public school bangalore - Gallery">
-          </a>
-          
-        </div>
-        <div class="gallery-slide">
-        
-          <a href="/images/6-8.jpg" data-fancybox="gallery" >
-            <img src="/images/6-8.jpg" alt="Dav public school bangalore - Gallery">
-          </a>
-          
-        </div>
 
-        <div class="gallery-slide">
-          <a href="/images/dav/SM-28.jpg" data-fancybox="gallery">
-            <img src="/images/dav/SM-28.jpg" alt="Dav public school bangalore">
-          </a>
-        </div>
+      {
+        gallerys.map((items)=> {
+          return (
+          <div class="gallery-slide">
         
-        <div class="gallery-slide">
-          <a href="/images/dav/SR-46.jpg" data-fancybox="gallery">
-            <img src="/images/dav/SR-46.jpg" alt="Dav public school bangalore">
-          </a>
-        </div>
+        <a href={items.images} data-fancybox="gallery">
+          <img src={items.images} alt="Dav public school bangalore - Gallery" />
+        </a>
         
-        <div class="gallery-slide">
-          <a href="/images/dav/SR-32.jpg" data-fancybox="gallery">
-            <img src="/images/dav/SR-32.jpg" alt="Dav public school bangalore">
-          </a>
-        </div>
-        
-        <div class="gallery-slide">
-          <a href="/images/dav/VR-132.jpg" data-fancybox="gallery">
-            <img src="/images/dav/VR-132.jpg" alt="Dav public school bangalore">
-          </a>
-        </div>
-        
-        <div class="gallery-slide">
-          <a href="/images/dav/SR-33.jpg" data-fancybox="gallery">
-            <img src="/images/dav/SR-33.jpg" alt="Dav public school bangalore">
-          </a>
-        </div>
-        
-        <div class="gallery-slide">
-          <a href="/images/dav/VR-146.jpg" data-fancybox="gallery">
-            <img src="/images/dav/VR-146.jpg" alt="Dav public school bangalore">
-          </a>
-        </div>
-        
-        <div class="gallery-slide">
-          <a href="/images/dav/SR-35.jpg" data-fancybox="gallery">
-            <img src="/images/dav/SR-35.jpg" alt="Dav public school bangalore">
-          </a>
-        </div>
-        
-        <div class="gallery-slide">
-          <a href="/images/dav/VR-157.jpg" data-fancybox="gallery">
-            <img src="/images/dav/VR-157.jpg" alt="Dav public school bangalore">
-          </a>
-        </div>
-        
-        <div class="gallery-slide">
-          <a href="/images/dav/VR-221.jpg" data-fancybox="gallery">
-            <img src="/images/dav/VR-221.jpg" alt="Dav public school bangalore">
-          </a>
-        </div>
-        
-        <div class="gallery-slide">
-          <a href="/images/dav/SM-18.jpg" data-fancybox="gallery">
-            <img src="/images/dav/SM-18.jpg" alt="Dav public school bangalore">
-          </a>
-        </div>
-        
-        <div class="gallery-slide">
-          <a href="/images/dav/VR-202.jpg" data-fancybox="gallery">
-            <img src="/images/dav/VR-202.jpg" alt="Dav public school bangalore">
-          </a>
-        </div>
-        
-        <div class="gallery-slide">
-          <a href="/images/dav/SR-73.jpg" data-fancybox="gallery">
-            <img src="/images/dav/SR-73.jpg" alt="Dav public school bangalore">
-          </a>
-        </div>
-        
-        <div class="gallery-slide">
-          <a href="/images/dav/VR-140.jpg" data-fancybox="gallery">
-            <img src="/images/dav/VR-140.jpg" alt="Dav public school bangalore">
-          </a>
-        </div>
-        
-        <div class="gallery-slide">
-          <a href="/images/dav/VR-1B4.jpg" data-fancybox="gallery">
-            <img src="/images/dav/VR-1B4.jpg" alt="Dav public school bangalore">
-          </a>
-        </div>
-        
-        <div class="gallery-slide">
-          <a href="/images/dav/VR-231.jpg" data-fancybox="gallery">
-            <img src="/images/dav/VR-231.jpg" alt="Dav public school bangalore">
-          </a>
-        </div>
-        
-        <div class="gallery-slide">
-          <a href="/images/dav/VR-233.jpg" data-fancybox="gallery">
-            <img src="/images/dav/VR-233.jpg" alt="Dav public school bangalore">
-          </a>
-        </div>
-        
-        <div class="gallery-slide">
-          <a href="/images/dav/VR-245.jpg" data-fancybox="gallery">
-            <img src="/images/dav/VR-245.jpg" alt="Dav public school bangalore">
-          </a>
-        </div>
-        
-        <div class="gallery-slide">
-          <a href="/images/dav/VR-248.jpg" data-fancybox="gallery">
-            <img src="/images/dav/VR-248.jpg" alt="Dav public school bangalore">
-          </a>
-        </div>
-        
-        <div class="gallery-slide">
-          <a href="/images/dav/SM-4.jpg" data-fancybox="gallery">
-            <img src="/images/dav/SM-4.jpg" alt="Dav public school bangalore">
-          </a>
-        </div>
-        
-        <div class="gallery-slide">
-          <a href="/images/dav/SR-30.jpg" data-fancybox="gallery">
-            <img src="/images/dav/SR-30.jpg" alt="Dav public school bangalore">
-          </a>
-        </div>
-
-        <div class="gallery-slide">
-          <a href="/images/events1.jpg" data-fancybox="gallery">
-            <img src="/images/events1.jpg" alt="Dav Public School Bangalore - events 1">
-          </a>
-        </div>
-        
-        <div class="gallery-slide">
-          <a href="/images/events2.jpg" data-fancybox="gallery">
-            <img src="/images/events2.jpg" alt="Dav Public School Bangalore - events 2">
-          </a>
-        </div>
-        
-        <div class="gallery-slide">
-          <a href="/images/events3.jpg" data-fancybox="gallery">
-            <img src="/images/events3.jpg" alt="Dav Public School Bangalore - events 3">
-          </a>
-        </div>
-        
-        <div class="gallery-slide">
-          <a href="/images/events4.jpg" data-fancybox="gallery">
-            <img src="/images/events4.jpg" alt="Dav Public School Bangalore - events 4">
-          </a>
-        </div>
-        
-        <div class="gallery-slide">
-          <a href="/images/events5.jpg" data-fancybox="gallery">
-            <img src="/images/events5.jpg" alt="Dav Public School Bangalore - events 5">
-          </a>
-        </div>
-        
-        <div class="gallery-slide">
-          <a href="/images/events6.jpg" data-fancybox="gallery">
-            <img src="/images/events6.jpg" alt="Dav Public School Bangalore - events 6">
-          </a>
-        </div>
-        
-        <div class="gallery-slide">
-          <a href="/images/events7.jpg" data-fancybox="gallery">
-            <img src="/images/events7.jpg" alt="Dav Public School Bangalore - events 7">
-          </a>
-        </div>
-        
-        <div class="gallery-slide">
-          <a href="/images/events8.jpg" data-fancybox="gallery">
-            <img src="/images/events8.jpg" alt="Dav Public School Bangalore - events 8">
-          </a>
-        </div>
-        
-        <div class="gallery-slide">
-          <a href="/images/events9.jpg" data-fancybox="gallery">
-            <img src="/images/events9.jpg" alt="Dav Public School Bangalore - events 9">
-          </a>
-        </div>
-        
-        <div class="gallery-slide">
-          <a href="/images/events10.jpg" data-fancybox="gallery">
-            <img src="/images/events10.jpg" alt="Dav Public School Bangalore - events 10">
-          </a>
-        </div>
-        
-        <div class="gallery-slide">
-          <a href="/images/events11.jpg" data-fancybox="gallery">
-            <img src="/images/events11.jpg" alt="Dav Public School Bangalore - events 11">
-          </a>
-        </div>
-        
-        <div class="gallery-slide">
-          <a href="/images/events12.jpg" data-fancybox="gallery">
-            <img src="/images/events12.jpg" alt="Dav Public School Bangalore - events 12">
-          </a>
-        </div>
-        
-        <div class="gallery-slide">
-          <a href="/images/events13.jpg" data-fancybox="gallery">
-            <img src="/images/events13.jpg" alt="Dav Public School Bangalore - events 13">
-          </a>
-        </div>
-        
-        <div class="gallery-slide">
-          <a href="/images/events14.jpg" data-fancybox="gallery">
-            <img src="/images/events14.jpg" alt="Dav Public School Bangalore - events 14">
-          </a>
-        </div>
+      </div>
+          )
+        })
+      }
+       
         
         
        
@@ -263,8 +150,11 @@ import Layout from "../layouts/Layout.astro";
 
 <style lang="scss">
   .gallery-slide{
+    
     img{
       width: 100%;
+      height: 330px;
+      object-fit: cover;
     }
   }
 

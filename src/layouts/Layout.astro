@@ -15,7 +15,7 @@ import { tns } from "tiny-slider/src/tiny-slider";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
 ---
 
 <!doctype html>
@@ -23,10 +23,15 @@ import "@fancyapps/ui/dist/fancybox/fancybox.css";
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="DAV PUBLIC SCHOOL BANGALORE" />
-    <meta name="viewport"  content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" type="image/svg+xml" href="/images/logo.jpg" />
     <meta name="generator" content={Astro.generator} />
-    <title> {title} - DAV PUBLIC SCHOOL BANGALORE</title>
+    <title>{title} - DAV PUBLIC SCHOOL BANGALORE</title>
+
+   
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -52,10 +57,10 @@ import "@fancyapps/ui/dist/fancybox/fancybox.css";
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
 
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.css"
-    />
+    /> -->
 
     <link
       rel="stylesheet"
@@ -77,14 +82,19 @@ import "@fancyapps/ui/dist/fancybox/fancybox.css";
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"></script>
 
-      <script
+    <script
       is:inline
       src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"
     ></script>
 
     <script>
       import "../script";
+      
+
+      
     </script>
+
+ 
   </body>
 </html>
 <style is:global lang="scss">
@@ -191,7 +201,7 @@ import "@fancyapps/ui/dist/fancybox/fancybox.css";
     overflow-x: hidden;
   }
 
-  html{
+  html {
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
   }
@@ -201,7 +211,7 @@ import "@fancyapps/ui/dist/fancybox/fancybox.css";
   }
 
   .sub-title {
-    font-size: clamp(16px,4vw,20px);
+    font-size: clamp(16px, 4vw, 20px);
     font-weight: 600;
 
     span {
