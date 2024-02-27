@@ -12,6 +12,7 @@
   "dependencies": {
     "@fancyapps/ui": "^5.0.28",
     "astro": "^3.6.3",
+    "gsap": "^3.12.5",
     "sass": "^1.69.5",
     "swiper": "^11.0.5",
     "tiny-slider": "^2.9.4"
