@@ -157,3 +157,16 @@ import Contact from "./contact.astro";
     --f-button-active-bg: #f0f0f0;
   }
 </style>
+
+<script>
+  const pop = document.querySelector(".pop-up")
+const cross = document.querySelector(".cross")
+
+
+pop.addEventListener("click", ()=> {
+  pop.style.display = "none"
+})
+cross.addEventListener("click", ()=> {
+  pop.style.display = "none"
+})
+</script>

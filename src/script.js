@@ -353,13 +353,3 @@ $(document).ready(function () {
 // amenities
 
 
-const pop = document.querySelector(".pop-up")
-const cross = document.querySelector(".cross")
-
-
-pop.addEventListener("click", ()=> {
-  pop.style.display = "none"
-})
-cross.addEventListener("click", ()=> {
-  pop.style.display = "none"
-})

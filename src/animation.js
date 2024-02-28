@@ -54,7 +54,7 @@ gsap.from(".event-grid", {
 });
 
 
-gsap.from(".why-us ", {
+gsap.from(".why-us", {
   scrollTrigger: {
     trigger: ".why-us",
     start: "top 80%",
