@@ -5,20 +5,20 @@ const {title, secondtitle} = Astro.props
 <div style="background-color: rgb(233, 233, 233);">
     <div class="container">
         <div class="pagebanner">
-            <a href="/">Home 
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+            <a href="/" class="pb">Home 
+                <svg class="pb" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
               </svg>
             
             </a> 
-              <p>{title}</p>
+              <p class="pb">{title}</p>
                
-              {secondtitle &&     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+              {secondtitle &&     <svg class="pb" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
               </svg>}
              
             
-              <p>{secondtitle}</p>
+              <p class="pb">{secondtitle}</p>
         </div>
     </div>
 </div>

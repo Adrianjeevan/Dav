@@ -121,29 +121,3 @@ import "@fancyapps/ui/dist/carousel/carousel.css";
 </style>
 
 
-<script is:inline >
-  const mainCarousel = new Carousel(mainContainer, mainOptions);
-
-const navContainer = document.getElementById("myNavigation");
-const navOptions = {
-  infinite: true,
-  transition: "slide",
-  center: true,
-  fill: true,
-  Autoplay: {
-    timeout: 3000,
-  },
-  slidesPerPage: 1,
-  dragFree: true,
-  Navigation: false,
-  button: false,
-
-  Dots: false,
-
-  Sync: {
-    target: mainCarousel,
-  },
-};
-
-new Carousel(navContainer, navOptions);
-</script>

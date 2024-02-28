@@ -197,6 +197,24 @@ if (document.querySelector(".safety-slider")) {
       },
     },
   });
+
+  gsap.utils.toArray(".safety-slider").forEach(function (slide, index) {
+    gsap.from(slide, {
+      y: 100,
+      opacity: 0,
+      // duration: 1,
+      stagger: 0.4,
+      scrollTrigger: {
+        trigger: slide,
+        start: "top 80%",
+        scale: 0.9,
+
+        // For debugging, you can remove this in production
+        toggleActions: "play none none reverse",
+        stagger: 0.4, // Stagger based on slide index
+      },
+    });
+  });
 }
 
 if (document.querySelector(".facility-slider")) {
@@ -233,6 +251,25 @@ if (document.querySelector(".facility-slider")) {
         gutter: 10,
       },
     },
+  });
+
+
+  gsap.utils.toArray(".facility-slider").forEach(function (slide, index) {
+    gsap.from(slide, {
+      y: 100,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.4,
+      scrollTrigger: {
+        trigger: slide,
+        start: "top 80%",
+        scale: 0.9,
+
+        // For debugging, you can remove this in production
+        toggleActions: "play none none reverse",
+        stagger: 0.4, // Stagger based on slide index
+      },
+    });
   });
 }
 
@@ -271,6 +308,25 @@ if (document.querySelector(".gallery-slider")) {
       },
     },
   });
+
+
+  gsap.utils.toArray(".gallery-slider").forEach(function (slide, index) {
+    gsap.from(slide, {
+      y: 100,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.4,
+      scrollTrigger: {
+        trigger: slide,
+        start: "top 80%",
+        scale: 0.9,
+
+        // For debugging, you can remove this in production
+        toggleActions: "play none none reverse",
+        stagger: 0.4, // Stagger based on slide index
+      },
+    });
+  });
 }
 
 $(document).ready(function () {
@@ -295,3 +351,15 @@ $(document).ready(function () {
 // amenities
 
 // amenities
+
+
+const pop = document.querySelector(".pop-up")
+const cross = document.querySelector(".cross")
+
+
+pop.addEventListener("click", ()=> {
+  pop.style.display = "none"
+})
+cross.addEventListener("click", ()=> {
+  pop.style.display = "none"
+})

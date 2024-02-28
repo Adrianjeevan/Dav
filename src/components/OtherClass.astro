@@ -9,14 +9,14 @@ import SectionTitle from "./SectionTitle.astro";
         <SectionTitle title="Other Classes & Courses" classes="text-center"/>
         <div class="others">
             {
-                Astro.url.pathname === '/nursery' ?  (null) : (<div>
+                Astro.url.pathname === '/nursery/' ?  (null) : (<div class="other-tile">
                 <h5>Nursery,LKG,UKG</h5>  
                 <a href="/nursery">Know more</a>
             </div>)
             }
             
                 {
-                    Astro.url.pathname !== '/grade1-5' ? ( <div>
+                    Astro.url.pathname !== '/grade1-5/' ? ( <div class="other-tile">
                         <h5>Grade 1 - 5</h5>  
                     <a href="/grade1-5">Know more</a>
                         
@@ -25,21 +25,21 @@ import SectionTitle from "./SectionTitle.astro";
             
             
                {
-                 Astro.url.pathname !== '/grade6-8' ? (<div>
+                 Astro.url.pathname !== '/grade6-8/' ? (<div class="other-tile">
                     <h5>Grade 6 - 8</h5>  
                  <a href="/grade6-8">Know more</a></div>) : null
                }
            
            
                 {
-                  Astro.url.pathname !== '/grade9-10' ?  (<div>
+                  Astro.url.pathname !== '/grade9-10/' ?  (<div class="other-tile">
                     <h5>Grade 9 - 10</h5>  
                   <a href="/grade9-10">Know more</a></div>) : null
                 }
            
            
                 {
-                    Astro.url.pathname !== '/grade11-12' ? (<div>
+                    Astro.url.pathname !== '/grade11-12/' ? (<div class="other-tile">
                         <h5>Grade 11 -12</h5>   
                     <a href="/grade11-12">Know more</a></div>) : null
                 }
