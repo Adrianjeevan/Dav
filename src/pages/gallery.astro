@@ -3,6 +3,8 @@ import PageBanner from "../components/PageBanner.astro";
 import Section from "../components/Section.astro";
 import SectionTitle from "../components/SectionTitle.astro";
 import Layout from "../layouts/Layout.astro";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
 
@@ -146,6 +148,10 @@ for (i = 0, j = gallerys.length; i < j; i += chunk) {
 
     </Section>
 </Layout>
+
+
+
+
 
 
 <style lang="scss">

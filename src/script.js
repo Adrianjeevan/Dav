@@ -2,14 +2,76 @@ import { tns } from "tiny-slider/src/tiny-slider";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import { Fancybox } from "@fancyapps/ui";
 import { gsap } from "gsap";
-    
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-Fancybox.bind();
 
+
+if (document.querySelector(".gallery-slider")) {
+  var slider = tns({
+    container: ".gallery-slider",
+
+    slideBy: 1,
+    autoplay: false,
+    edgePadding: 0,
+    // navContainer: ".nav-container",
+    // navAsThumbnails: false,
+    nav: false,
+    autoplayButton: false,
+    autoplayButtonOutput: false,
+    controls: true,
+    controlsContainer: ".gallery-controls",
+    responsive: {
+      0: {
+        edgePadding: 0,
+        gutter: 0,
+        items: 1,
+      },
+      640: {
+        edgePadding: 0,
+        gutter: 0,
+        items: 1,
+      },
+      700: {
+        gutter: 30,
+        items: 2,
+      },
+      900: {
+        items: 3,
+        gutter: 10,
+      },
+    },
+  });
+
+  gsap.from(".gallery-slider .tns-slide-active", {
+    y: 50,
+    stagger: 0.2,
+    opacity: 0,
+    duration: 0.7,
+  });
+
+  slider.events.on("indexChanged", function (info) {
+    // Target the current active slide link
+    var activeLink = $(".gallery-slider .tns-slide-active ");
+
+    // GSAP animation with requestAnimationFrame
+    function animate() {
+      gsap.from(activeLink, {
+        y: 50,
+        stagger: 0.2,
+        opacity: 0,
+        duration: 1,
+      });
+    }
+
+    // Request animation frame
+    requestAnimationFrame(animate);
+  });
+}
+
+Fancybox.bind();
 
 const mainContainer = document.getElementById("myCarousel");
 const mainOptions = {
@@ -19,8 +81,6 @@ const mainOptions = {
     timeout: 3000,
   },
 };
-
-
 
 let headerHeight = document.querySelector("header").offsetHeight;
 
@@ -63,6 +123,31 @@ if (document.querySelector(".hero-slider")) {
     nav: false,
     animateDelay: 700,
   });
+
+  gsap.from(".hero-slider .tns-slide-active .banner-title", {
+    y: 50,
+    stagger: 0.2,
+    opacity: 0,
+    duration: 0.7,
+  });
+
+  slider.events.on("indexChanged", function (info) {
+    // Target the current active slide link
+    var activeLink = $(".hero-slider .tns-slide-active .banner-title");
+
+    // GSAP animation with requestAnimationFrame
+    function animate() {
+      gsap.from(activeLink, {
+        y: 50,
+        stagger: 0.2,
+        opacity: 0,
+        duration: 1,
+      });
+    }
+
+    // Request animation frame
+    requestAnimationFrame(animate);
+  });
 }
 
 if (document.querySelector(".test-slider")) {
@@ -77,15 +162,14 @@ if (document.querySelector(".test-slider")) {
     controls: true,
     autoplayButton: false,
     autoplayButtonOutput: false,
-    
+
     animateIn: "fadeInDown",
     animateOut: "fadeOutDown",
-    controlsContainer:'.testi-controls',
+    controlsContainer: ".testi-controls",
     nav: false,
     animateDelay: 700,
   });
 
-  
   gsap.utils.toArray(".test-slider .slide").forEach(function (slide, index) {
     gsap.from(slide, {
       y: 100,
@@ -137,91 +221,36 @@ if (document.querySelector(".course-slider")) {
         gutter: 40,
       },
     },
-
-
-
-
   });
 
-  gsap.utils.toArray(".course-slider .course-card").forEach(function (slide, index) {
-    gsap.from(slide, {
-      y: 100,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.4,
-      scrollTrigger: {
-        trigger: slide,
-        start: "top 80%",
-        scale: 0.9,
+  gsap.utils
+    .toArray(".course-slider .course-card")
+    .forEach(function (slide, index) {
+      gsap.from(slide, {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.4,
+        scrollTrigger: {
+          trigger: slide,
+          start: "top 80%",
+          scale: 0.9,
 
-        // For debugging, you can remove this in production
-        toggleActions: "play none none reverse",
-        stagger: 0.4, // Stagger based on slide index
-      },
+          // For debugging, you can remove this in production
+          toggleActions: "play none none reverse",
+          stagger: 0.4, // Stagger based on slide index
+        },
+      });
     });
-  });
 }
 
-if (document.querySelector(".safety-slider")) {
-  var slider = tns({
-    container: ".safety-slider",
 
-    slideBy: 1,
-    autoplay: false,
-    edgePadding: 0,
-    // navContainer: ".nav-container",
-    // navAsThumbnails: false,
-    nav: false,
-    autoplayButton: false,
-    autoplayButtonOutput: false,
-    controls: true,
-    controlsContainer: ".controls-containers2",
-    responsive: {
-      0: {
-        edgePadding: 0,
-        gutter: 0,
-        items: 1,
-      },
-      640: {
-        edgePadding: 0,
-        gutter: 0,
-        items: 1,
-      },
-      700: {
-        gutter: 30,
-        items: 2,
-      },
-      900: {
-        items: 3,
-        gutter: 10,
-      },
-    },
-  });
-
-  gsap.utils.toArray(".safety-slider").forEach(function (slide, index) {
-    gsap.from(slide, {
-      y: 100,
-      opacity: 0,
-      // duration: 1,
-      stagger: 0.4,
-      scrollTrigger: {
-        trigger: slide,
-        start: "top 80%",
-        scale: 0.9,
-
-        // For debugging, you can remove this in production
-        toggleActions: "play none none reverse",
-        stagger: 0.4, // Stagger based on slide index
-      },
-    });
-  });
-}
 
 if (document.querySelector(".facility-slider")) {
   var slider = tns({
     container: ".facility-slider",
 
-    slideBy: 1,
+    slideBy: "page",
     autoplay: false,
     edgePadding: 0,
     // navContainer: ".nav-container",
@@ -253,31 +282,62 @@ if (document.querySelector(".facility-slider")) {
     },
   });
 
+  gsap.from(".facility-slider .tns-slide-active ", {
+    y: 50,
+    stagger: 0.2,
+    opacity: 0,
+    duration: 0.7,
+  });
 
-  gsap.utils.toArray(".facility-slider").forEach(function (slide, index) {
-    gsap.from(slide, {
-      y: 100,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.4,
-      scrollTrigger: {
-        trigger: slide,
-        start: "top 80%",
-        scale: 0.9,
+  slider.events.on("indexChanged", function (info) {
+    // Target the current active slide link
+    var activeLink = $(".facility-slider .tns-slide-active ");
 
-        // For debugging, you can remove this in production
-        toggleActions: "play none none reverse",
-        stagger: 0.4, // Stagger based on slide index
-      },
-    });
+    // GSAP animation with requestAnimationFrame
+    function animate() {
+      gsap.from(activeLink, {
+        y: 50,
+        stagger: 0.2,
+        opacity: 0,
+        duration: 1,
+      });
+    }
+
+    // Request animation frame
+    requestAnimationFrame(animate);
   });
 }
 
-if (document.querySelector(".gallery-slider")) {
-  var slider = tns({
-    container: ".gallery-slider",
 
-    slideBy: 1,
+
+$(document).ready(function () {
+  new PureCounter({
+    selector: ".purecounter",
+    start: 0,
+    end: 100,
+    duration: 2,
+    delay: 10,
+    once: true,
+    repeat: false,
+    decimals: 0,
+    legacy: true,
+    filesizing: false,
+    currency: false,
+    separator: false,
+  });
+});
+
+// amenities
+
+// amenities
+
+
+
+if (document.querySelector(".safety-slider")) {
+  var slider = tns({
+    container: ".safety-slider",
+
+    slideBy: "page",
     autoplay: false,
     edgePadding: 0,
     // navContainer: ".nav-container",
@@ -286,7 +346,7 @@ if (document.querySelector(".gallery-slider")) {
     autoplayButton: false,
     autoplayButtonOutput: false,
     controls: true,
-    controlsContainer: ".gallery-controls",
+    controlsContainer: ".controls-containers2",
     responsive: {
       0: {
         edgePadding: 0,
@@ -309,47 +369,41 @@ if (document.querySelector(".gallery-slider")) {
     },
   });
 
+  gsap.from(".safety-slider .tns-slide-active", {
+    y: 50,
+    stagger: 0.2,
+    opacity: 0,
+    duration: 0.7,
+  });
 
-  gsap.utils.toArray(".gallery-slider").forEach(function (slide, index) {
-    gsap.from(slide, {
-      y: 100,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.4,
-      scrollTrigger: {
-        trigger: slide,
-        start: "top 80%",
-        scale: 0.9,
+  slider.events.on("indexChanged", function (info) {
+    // Target the current active slide link
+    var activeLink = $(".safety-slider .tns-slide-active ");
 
-        // For debugging, you can remove this in production
-        toggleActions: "play none none reverse",
-        stagger: 0.4, // Stagger based on slide index
-      },
-    });
+    // GSAP animation with requestAnimationFrame
+    function animate() {
+      gsap.from(activeLink, {
+        y: 50,
+        stagger: 0.2,
+        opacity: 0,
+        duration: 1,
+      });
+    }
+
+    // Request animation frame
+    requestAnimationFrame(animate);
   });
 }
 
-$(document).ready(function () {
-  new PureCounter({
-    selector: ".purecounter",
-    start: 0,
-    end: 100,
-    duration: 2,
-    delay: 10,
-    once: true,
-    repeat: false,
-    decimals: 0,
-    legacy: true,
-    filesizing: false,
-    currency: false,
-    separator: false,
-  });
-});
 
 
 
-// amenities
 
-// amenities
+
+
+
+
+
+
 
 

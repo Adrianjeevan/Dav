@@ -1,8 +1,40 @@
 import { gsap } from "gsap";
-
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
+
+// Select all elements with the class "yellow-title"
+const sectionTitles = document.querySelectorAll('.section-title');
+
+// Loop through each yellow title element
+sectionTitles.forEach((title) => {
+  // Apply GSAP animation to each title
+  gsap.from(title, {
+    scrollTrigger: {
+      trigger: title, // Use the current title element as trigger
+      start: "top 80%",
+      toggleActions: "play none none reverse",
+    },
+    y: 50,
+    opacity: 0,
+    scrub:"true",  
+    duration: 1 ,
+    delay: 0,
+  });
+});
+
+gsap.from(".popimg", {
+ 
+  y: 50,
+  opacity: 0,
+  scrub:"true",  
+  duration: 1 ,
+  delay: 0,
+});
+
+
+
+
 
 
 
@@ -54,23 +86,7 @@ gsap.from(".event-grid", {
 });
 
 
-gsap.from(".why-us", {
-  scrollTrigger: {
-    trigger: ".why-us",
-    start: "top 80%",
 
-    toggleActions: "play none none reverse",
-
-    // markers: true,
-  },
-  y: 0,
-
-  opacity: 0,
-  stagger: 0.2,
-  scale: 0.9,
-
-  delay: 0,
-});
 
 gsap.from(".news .new", {
   scrollTrigger: {
@@ -89,22 +105,6 @@ gsap.from(".news .new", {
   delay: 0,
 });
 
-gsap.from(".numbers .box", {
-  scrollTrigger: {
-    trigger: ".numbers .box",
-    start: "top 80%",
-
-    toggleActions: "play none none reverse",
-
-    // markers: true,
-  },
-  y: 50,
-
-  opacity: 0,
-  stagger: 0.3,
-
-  delay: 0,
-});
 
 gsap.from(".principal .principal-img", {
   scrollTrigger: {
