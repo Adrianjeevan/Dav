@@ -28,7 +28,14 @@ import Contact from "./contact.astro";
     />
 
     <div class="container">
-      <div class="d-flex justify-content-center news pt-4">
+      <div class=" news pt-4">
+        <p class="new">
+          <a
+            href="/images/letter-2/pdf"
+            download="Newsletter-oct-one"
+            class="normal">Download Newsletter-October-23-24(2)</a
+          >
+        </p>
         <p class="new">
           <a
             href="/images/October-23.pdf"
@@ -61,7 +68,7 @@ import Contact from "./contact.astro";
       <div class="text-end">
         <img src="/images/cross.png" alt="" style="max-width: 20px;" class="cross">
       </div>
-      <img src="/images/pop.jpg" alt="" class="popimg">
+      <img src="/images/popup.jpg" alt="" class="popimg">
     </div>
   </div>
 </Layout>
@@ -119,12 +126,21 @@ import Contact from "./contact.astro";
   }
 
   .news {
-    gap: 2rem;
-    @media screen and (max-width: 1024px) {
-      flex-direction: column;
-      align-items: center;
-      gap: 3rem;
+    // gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr );
+    row-gap: 3rem;
+
+    @media screen and (max-width:991px) {
+      grid-template-columns: repeat(1 , 1fr );
+      justify-content: center;
+      place-content: center;
+      place-items: center;
     }
+    .new{
+      width: 100%;
+    }
+   
   }
 
   .f-carousel__slide.is-nav-selected {
