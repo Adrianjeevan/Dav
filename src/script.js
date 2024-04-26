@@ -13,7 +13,7 @@ if (document.querySelector(".gallery-slider")) {
   var slider = tns({
     container: ".gallery-slider",
 
-    slideBy: 1,
+    slideBy: 3,
     autoplay: false,
     edgePadding: 0,
     // navContainer: ".nav-container",
